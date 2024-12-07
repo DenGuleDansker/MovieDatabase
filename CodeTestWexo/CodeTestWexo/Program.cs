@@ -1,4 +1,7 @@
+using Blazored.LocalStorage;
 using CodeTestWexo.Components;
+using CodeTestWexo.Interfaces;
+using CodeTestWexo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddScoped<MovieDbService>();
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<ICreditService, CreditsService>();
+builder.Services.AddScoped<IRestClientService, RestClientService>();
+builder.Services.AddBlazoredLocalStorage();
 
 var app = builder.Build();
 

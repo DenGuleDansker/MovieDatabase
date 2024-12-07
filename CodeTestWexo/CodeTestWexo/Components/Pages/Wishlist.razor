@@ -1,7 +1,25 @@
 ﻿@page "/wishlist"
+@using CodeTestWexo.Components.Models
+@using CodeTestWexo.Interfaces
+@rendermode InteractiveServer
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IMovieService MovieService
+@inject NavigationManager Navigation
 
-<h3>Wishlist</h3>
+<h3>Your Wishlist</h3>
 
-@code {
-    
-}
+<div class="wishlist-container">
+    @foreach (var movie in wishlist)
+    {
+        <div class="wishlist-item">
+            <!-- Wrap the movie poster in a clickable element -->
+            <a @onclick="() => RedirectToMoviePage(movie.Id)">
+                <img src="@($"https://image.tmdb.org/t/p/w200{movie.PosterPath}")" alt="@movie.Title" class="wishlist-poster"/>
+            </a>
+            <div class="movie-details">
+                <p>@movie.Title</p>
+                <button @onclick="() => RemoveFromWishlist(movie.Id)">Remove from Wishlist</button>
+            </div>
+        </div>
+    }
+</div>

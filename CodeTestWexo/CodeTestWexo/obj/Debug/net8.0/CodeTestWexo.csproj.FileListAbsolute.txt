@@ -33,3 +33,5 @@ C:\Users\chili\RiderProjects\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcs
 C:\Users\chili\RiderProjects\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\CodeTest.C1F08292.Up2Date
 C:\Users\chili\RiderProjects\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\GenreDetails.razor.rz.scp.css
 C:\Users\chili\RiderProjects\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieDetails.razor.rz.scp.css
+C:\Users\chili\RiderProjects\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\Blazored.LocalStorage.dll
+C:\Users\chili\RiderProjects\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\Wishlist.razor.rz.scp.css

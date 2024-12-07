@@ -94,3 +94,15 @@ main {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.article-container {
+    height: 100vh;  /* Full viewport height */
+    overflow: auto; /* Allow scrolling inside the article if content is larger than the container */
+    padding: 20px;  /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+body {
+    margin: 0;  /* Remove default body margin */
+    height: 100vh;  /* Ensure the body also takes the full viewport height */
+}

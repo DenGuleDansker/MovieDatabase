@@ -26,10 +26,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chili/RiderProjects/CodeTestWexo/CodeTestWexo/Components/Pages/Wishlist.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXaXNobGlzdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/chili/RiderProjects/CodeTestWexo/CodeTestWexo/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,3 +53,7 @@ build_metadata.AdditionalFiles.CssScope = b-j5xuy0mhwr
 [C:/Users/chili/RiderProjects/CodeTestWexo/CodeTestWexo/Components/Pages/MovieDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb3ZpZURldGFpbHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ppw9tb1rus
+
+[C:/Users/chili/RiderProjects/CodeTestWexo/CodeTestWexo/Components/Pages/Wishlist.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXaXNobGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-lh3ciamr6e

@@ -95,6 +95,18 @@ main[b-69k8r7afcp] {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.article-container[b-69k8r7afcp] {
+    height: 100vh;  /* Full viewport height */
+    overflow: auto; /* Allow scrolling inside the article if content is larger than the container */
+    padding: 20px;  /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+body[b-69k8r7afcp] {
+    margin: 0;  /* Remove default body margin */
+    height: 100vh;  /* Ensure the body also takes the full viewport height */
+}
 /* _content/CodeTestWexo/Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-ia5gpc78q7] {
     appearance: none;
@@ -252,6 +264,25 @@ main[b-69k8r7afcp] {
 .movie-item button.view-details-btn:hover[b-sdl9w3h068] {
     background-color: #0056b3; /* Darken the button on hover */
 }
+
+.pagination[b-sdl9w3h068] {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.page-btn[b-sdl9w3h068] {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.page-btn:hover[b-sdl9w3h068] {
+    background-color: #0056b3;
+}
 /* _content/CodeTestWexo/Components/Pages/MovieDbHome.razor.rz.scp.css */
 .genre-section[b-j5xuy0mhwr] {
     margin-bottom: 20px;
@@ -336,32 +367,119 @@ main[b-69k8r7afcp] {
     position: relative;
     background-size: cover;
     background-position: center;
-    color: white; /* Ensures the text is white */
+    padding: 30px;
+    color: white;
 }
+
 
 .movie-details-grid[b-ppw9tb1rus] {
-    position: relative;
-    z-index: 2; /* Keeps the content on top of the background overlay */
-    padding: 20px;
-}
-
-.movie-info[b-ppw9tb1rus] {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    z-index: 2; /* Keeps text above overlay */
-}
-
-.movie-info h3[b-ppw9tb1rus] {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.movie-info p[b-ppw9tb1rus] {
-    font-size: 1.1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
 }
 
 .movie-poster-container img[b-ppw9tb1rus] {
-    width: 200px;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-info h3[b-ppw9tb1rus] {
+    font-size: 24px;
     margin-bottom: 10px;
 }
+
+.movie-info p[b-ppw9tb1rus] {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.actors-container[b-ppw9tb1rus] {
+    margin-top: 40px;
+}
+
+.actors-row[b-ppw9tb1rus] {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Wrap actors if more than 4 */
+}
+
+.actor-item[b-ppw9tb1rus] {
+    text-align: center;
+    width: 150px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.actor-item img[b-ppw9tb1rus] {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 30%;
+    margin-bottom: 10px;
+}
+
+.actor-item p[b-ppw9tb1rus] {
+    font-size: 14px;
+}
+/* _content/CodeTestWexo/Components/Pages/Wishlist.razor.rz.scp.css */
+.wishlist-container[b-lh3ciamr6e] {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.wishlist-item[b-lh3ciamr6e] {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.wishlist-poster[b-lh3ciamr6e] {
+    width: 150px; 
+    height: 225px; 
+    object-fit: cover;
+}
+
+.movie-details[b-lh3ciamr6e] {
+    text-align: center;
+}
+
+button[b-lh3ciamr6e] {
+    padding: 5px 10px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; 
+}
+
+button:hover[b-lh3ciamr6e] {
+    background-color: #e64b4b;
+}
+
+
+@media (max-width: 768px) {
+    .wishlist-container[b-lh3ciamr6e] {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .wishlist-container[b-lh3ciamr6e] {
+        grid-template-columns: 1fr; 
+    }
+}
+.wishlist-item a[b-lh3ciamr6e] {
+    cursor: pointer;
+}
+

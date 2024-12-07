@@ -2,32 +2,59 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    color: white; /* Ensures the text is white */
+    padding: 30px;
+    color: white;
 }
+
 
 .movie-details-grid {
-    position: relative;
-    z-index: 2; /* Keeps the content on top of the background overlay */
-    padding: 20px;
-}
-
-.movie-info {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    z-index: 2; /* Keeps text above overlay */
-}
-
-.movie-info h3 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.movie-info p {
-    font-size: 1.1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
 }
 
 .movie-poster-container img {
-    width: 200px;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-info h3 {
+    font-size: 24px;
     margin-bottom: 10px;
+}
+
+.movie-info p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.actors-container {
+    margin-top: 40px;
+}
+
+.actors-row {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Wrap actors if more than 4 */
+}
+
+.actor-item {
+    text-align: center;
+    width: 150px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.actor-item img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 30%;
+    margin-bottom: 10px;
+}
+
+.actor-item p {
+    font-size: 14px;
 }

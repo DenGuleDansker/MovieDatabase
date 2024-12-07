@@ -1,5 +1,10 @@
 ﻿@page "/movie/{movieId:int}"
-@inject MovieDbService MovieDbService
+@using CodeTestWexo.Components.Models
+@using CodeTestWexo.Interfaces
+@rendermode InteractiveServer
+@inject IMovieService MovieService
+@inject ICreditService CreditsService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
 
 @if (movie == null)
 {
@@ -7,7 +12,7 @@
 }
 else
 {
-    <div class="movie-details-cover" style="background-image: url('@($"https://image.tmdb.org/t/p/original{movie.BackdropPath}")');">
+    <div class="movie-details-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@($"https://image.tmdb.org/t/p/original{movie.BackdropPath}")'); background-size: cover; background-position: center;">
         <div class="movie-details-grid">
             <div class="movie-poster-container">
                 <!-- Movie Poster -->
@@ -30,25 +35,59 @@ else
                 <p>
                     <strong>Release Year:</strong> @movie.ReleaseDate.Year
                 </p>
-
-                <!-- Genre(s) -->
+                
+                <p>
+                    <strong>Rating</strong> @movie.VoteAverage.ToString("F1")
+                </p>
+                
+                <p>
+                    <strong>Overall votes</strong> @movie.VoteCount
+                </p>  
+                
                 <p>
                     <strong>Genre(s):</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))
                 </p>
 
+                <button @onclick="ToggleWishlist" class="wishlist-btn">
+                    @if (wishlist.Contains(movie.Id))
+                    {
+                        <span>Remove from Wishlist</span>
+                    }
+                    else
+                    {
+                        <span>Add to Wishlist</span>
+                    }
+                </button>
             </div>
         </div>
     </div>
-}
 
-@code {
-    [Parameter] public int movieId { get; set; }
-    private MovieDbService.Movie movie;
-
-    protected override async Task OnInitializedAsync()
-    {
-        // Fetch movie details
-        movie = await MovieDbService.GetMovieDetailsAsync(movieId);
-    }
-
+    <!-- Actor Section -->
+    <div class="actors-container">
+        <h4>Actors:</h4>
+        @if (actors == null || !actors.Any())
+        {
+            <p>No actors available for this movie.</p>
+        }
+        else
+        {
+            <div class="actors-row">
+                @foreach (var actor in actors)
+                {
+                    <div class="actor-item">
+                        @if (!string.IsNullOrEmpty(actor.ProfilePath))
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w200{actor.ProfilePath}")" alt="@actor.Name"/>
+                        }
+                        else
+                        {
+                            <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                        }
+                        <p>@actor.Name</p>
+                        <p>@actor.KnownForDepartment</p>
+                    </div>
+                }
+            </div>
+        }
+    </div>
 }

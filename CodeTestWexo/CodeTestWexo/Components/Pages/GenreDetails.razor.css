@@ -48,3 +48,22 @@
 .movie-item button.view-details-btn:hover {
     background-color: #0056b3; /* Darken the button on hover */
 }
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.page-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+}

@@ -2,32 +2,59 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    color: white; /* Ensures the text is white */
+    padding: 30px;
+    color: white;
 }
+
 
 .movie-details-grid[b-ppw9tb1rus] {
-    position: relative;
-    z-index: 2; /* Keeps the content on top of the background overlay */
-    padding: 20px;
-}
-
-.movie-info[b-ppw9tb1rus] {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    z-index: 2; /* Keeps text above overlay */
-}
-
-.movie-info h3[b-ppw9tb1rus] {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.movie-info p[b-ppw9tb1rus] {
-    font-size: 1.1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
 }
 
 .movie-poster-container img[b-ppw9tb1rus] {
-    width: 200px;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-info h3[b-ppw9tb1rus] {
+    font-size: 24px;
     margin-bottom: 10px;
+}
+
+.movie-info p[b-ppw9tb1rus] {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.actors-container[b-ppw9tb1rus] {
+    margin-top: 40px;
+}
+
+.actors-row[b-ppw9tb1rus] {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Wrap actors if more than 4 */
+}
+
+.actor-item[b-ppw9tb1rus] {
+    text-align: center;
+    width: 150px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.actor-item img[b-ppw9tb1rus] {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 30%;
+    margin-bottom: 10px;
+}
+
+.actor-item p[b-ppw9tb1rus] {
+    font-size: 14px;
 }
