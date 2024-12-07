@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
+        "projectName": "CodeTestWexo",
+        "projectPath": "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
+        "packagesPath": "C:\\Users\\chili\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "RestSharp": {
+              "target": "Package",
+              "version": "[112.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\chili\\.dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

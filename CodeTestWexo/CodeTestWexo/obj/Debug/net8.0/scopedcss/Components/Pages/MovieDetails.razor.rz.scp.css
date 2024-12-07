@@ -1,0 +1,33 @@
+.movie-details-cover[b-ppw9tb1rus] {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensures the text is white */
+}
+
+.movie-details-grid[b-ppw9tb1rus] {
+    position: relative;
+    z-index: 2; /* Keeps the content on top of the background overlay */
+    padding: 20px;
+}
+
+.movie-info[b-ppw9tb1rus] {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    z-index: 2; /* Keeps text above overlay */
+}
+
+.movie-info h3[b-ppw9tb1rus] {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.movie-info p[b-ppw9tb1rus] {
+    font-size: 1.1rem;
+}
+
+.movie-poster-container img[b-ppw9tb1rus] {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

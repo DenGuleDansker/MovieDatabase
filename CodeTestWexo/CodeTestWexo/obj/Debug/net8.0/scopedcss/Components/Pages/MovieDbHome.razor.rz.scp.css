@@ -1,0 +1,78 @@
+.genre-section[b-j5xuy0mhwr] {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.genre-section h4[b-j5xuy0mhwr] {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.movies-grid[b-j5xuy0mhwr] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjusts column size */
+    gap: 50px; /* Space between items */
+    padding: 50px;
+}
+
+.movie-item[b-j5xuy0mhwr] {
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-item:hover[b-j5xuy0mhwr] {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.movie-item img[b-j5xuy0mhwr] {
+    width: 100%; /* Make the image fill the container */
+    max-width: 250px; /* Ensure the image doesn't get too large */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.movie-item button[b-j5xuy0mhwr] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.genre-section button[b-j5xuy0mhwr]{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movie-item button:hover[b-j5xuy0mhwr] {
+    background-color: #0056b3;
+}
+
+.load-more-button[b-j5xuy0mhwr] {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-more-button:hover[b-j5xuy0mhwr] {
+    background-color: #0056b3;
+}

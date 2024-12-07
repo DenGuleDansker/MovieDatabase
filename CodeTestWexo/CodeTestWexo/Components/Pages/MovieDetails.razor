@@ -1,0 +1,54 @@
+﻿@page "/movie/{movieId:int}"
+@inject MovieDbService MovieDbService
+
+@if (movie == null)
+{
+    <p>Loading movie details...</p>
+}
+else
+{
+    <div class="movie-details-cover" style="background-image: url('@($"https://image.tmdb.org/t/p/original{movie.BackdropPath}")');">
+        <div class="movie-details-grid">
+            <div class="movie-poster-container">
+                <!-- Movie Poster -->
+                @if (!string.IsNullOrEmpty(movie.PosterPath))
+                {
+                    <img src="@($"https://image.tmdb.org/t/p/w500{movie.PosterPath}")" class="movie-poster" alt="@movie?.Title"/>
+                }
+            </div>
+
+            <div class="movie-info">
+                <!-- Movie Title -->
+                <h3>@movie?.Title</h3>
+
+                <!-- Overview -->
+                <p>
+                    <strong>Description:</strong> @movie.Overview
+                </p>
+
+                <!-- Release Year -->
+                <p>
+                    <strong>Release Year:</strong> @movie.ReleaseDate.Year
+                </p>
+
+                <!-- Genre(s) -->
+                <p>
+                    <strong>Genre(s):</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))
+                </p>
+
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public int movieId { get; set; }
+    private MovieDbService.Movie movie;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch movie details
+        movie = await MovieDbService.GetMovieDetailsAsync(movieId);
+    }
+
+}

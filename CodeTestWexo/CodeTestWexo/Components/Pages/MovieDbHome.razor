@@ -1,0 +1,70 @@
+﻿@page "/"
+@inject MovieDbService MovieDbService
+
+<h3>Genres</h3>
+
+@if (isLoading)
+{
+    <p>Loading genres and movies...</p>
+}
+else
+{
+    @foreach (var genre in genres)
+    {
+        <div class="genre-section">
+            <h4>
+                @genre.Name
+            </h4>
+            <a href="@($"/genre/{genre.Id}")">
+                <button>View all movies</button>
+            </a>
+            <p>Total Movies: @genreCounts[genre.Id]</p>
+
+            <div class="movies-grid">
+                @foreach (var movie in genreMovies[genre.Id].Take(5)) // Show a few movies
+                {
+                    <div class="movie-item">
+                        <p>@movie.Title</p>
+
+                        <!-- Display Movie Poster Image -->
+                        @if (!string.IsNullOrEmpty(movie.PosterPath))
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w500{movie.PosterPath}")" style="max-width: 200px; margin-bottom: 10px;"/>
+                        }
+
+                        <a href="@($"/movie/{movie.Id}")">
+                            <button>Details</button>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+
+@code {
+    private List<MovieDbService.Genre> genres = new();
+    private Dictionary<int, List<MovieDbService.Movie>> genreMovies = new();
+    private Dictionary<int, int> genreCounts = new();
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            genres = await MovieDbService.GetGenresAsync();
+
+            foreach (var genre in genres)
+            {
+                var movies = await MovieDbService.GetMoviesByGenreAsync(genre.Id);
+                genreMovies[genre.Id] = movies;
+                genreCounts[genre.Id] = movies.Count; // Placeholder for total count
+            }
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+    
+}

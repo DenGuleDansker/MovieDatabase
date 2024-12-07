@@ -1,0 +1,45 @@
+﻿@page "/genre/{genreId:int}"
+@inject MovieDbService MovieDbService
+
+<h3>@genreName</h3>
+<p>Total Movies: @totalMoviesCount</p>
+
+@if (movies == null)
+{
+    <p>Loading movies...</p>
+}
+else
+{
+    <div class="movies-grid">
+        @foreach (var movie in movies)
+        {
+            <div class="movie-item">
+                <img src="@($"https://image.tmdb.org/t/p/w500{movie.PosterPath}")" alt="@movie.Title" />
+                <p>@movie.Title</p>
+                <a href="@($"/movie/{movie.Id}")">
+                    <button class="view-details-btn">View Details</button>
+                </a>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter] public int genreId { get; set; }
+    private string genreName;
+    private List<MovieDbService.Movie> movies;
+    private int totalMoviesCount;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get the genre name based on the genreId
+        var genre = (await MovieDbService.GetGenresAsync()).FirstOrDefault(g => g.Id == genreId);
+        genreName = genre?.Name;
+
+        // Fetch all movies for this genre
+        movies = await MovieDbService.GetMoviesByGenreAsync(genreId);
+
+        // Set the total movie count
+        totalMoviesCount = movies?.Count ?? 0;
+    }
+}
