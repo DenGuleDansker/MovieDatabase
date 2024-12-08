@@ -18,5 +18,3 @@ Make sure you have .NET 8 SDK installed on your machine. You can check this by r
 
 ```bash
 dotnet --version
-
-git clone <repository-url>
