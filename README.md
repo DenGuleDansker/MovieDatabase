@@ -4,7 +4,7 @@ This is a Movie Database application built with .NET 8 and Blazor. It fetches mo
 
 ## Requirements
 
-- .NET 8 SDK or higher
+- .NET 8 SDK 
 - A browser to view the app
 - An API key for The Movie Database (TMDb) API (if necessary, replace the API key in the project)
 
@@ -19,15 +19,21 @@ Make sure you have .NET 8 SDK installed on your machine. You can check this by r
 ```bash
 dotnet --version
 ```
+Else do this
+```bash
+winget install Microsoft.DotNet.SDK.8
+```
 
 ### 2. Clone the project
 ```bash
-git clone <repository-url>
+git clone https://github.com/DenGuleDansker/MovieDatabase.git
 ```
 
 ## 3. Navigate to the Project Folder
 ```bash
 cd moviedatabase
+
+cd codetestwexo
 
 cd codetestwexo
 ```
