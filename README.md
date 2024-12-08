@@ -19,6 +19,10 @@ Make sure you have .NET 8 SDK installed on your machine. You can check this by r
 ```bash
 dotnet --version
 ```
+Else do this
+```bash
+winget install Microsoft.DotNet.SDK.8
+```
 
 ### 2. Clone the project
 ```bash
