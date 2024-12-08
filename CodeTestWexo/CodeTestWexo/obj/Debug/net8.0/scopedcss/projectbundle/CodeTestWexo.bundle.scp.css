@@ -422,29 +422,8 @@ body[b-69k8r7afcp] {
     }
     
 }
-.cookie-banner[b-7vd1q7ipzz] {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    z-index: 9999;
-}
 
-.cookie-banner button[b-7vd1q7ipzz] {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
 
-.cookie-banner button:hover[b-7vd1q7ipzz] {
-    background-color: #45a049;
-}
 
 /* _content/CodeTestWexo/Components/Pages/MovieDetails.razor.rz.scp.css */
 .movie-details-cover[b-ppw9tb1rus] {
@@ -572,6 +551,95 @@ iframe[b-ppw9tb1rus] {
 }
 
 
+/* _content/CodeTestWexo/Components/Pages/RandomMoviePicker.razor.rz.scp.css */
+.random-movie-picker-container[b-o2a4kuhhmi] {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+h3[b-o2a4kuhhmi] {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.filters[b-o2a4kuhhmi] {
+    margin-bottom: 20px;
+}
+
+.filters label[b-o2a4kuhhmi] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filters select[b-o2a4kuhhmi],
+.filters input[b-o2a4kuhhmi] {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+}
+
+button[b-o2a4kuhhmi] {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover[b-o2a4kuhhmi] {
+    background-color: #0056b3;
+}
+
+.movie-details[b-o2a4kuhhmi] {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details h4[b-o2a4kuhhmi] {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.movie-image-container[b-o2a4kuhhmi] {
+    margin-bottom: 15px;
+}
+
+.movie-image-container img[b-o2a4kuhhmi] {
+    max-width: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-image-container img:hover[b-o2a4kuhhmi] {
+    transform: scale(1.05);
+}
+
+.movie-details p[b-o2a4kuhhmi] {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #d3d3d3;
+}
+
+p[b-o2a4kuhhmi] {
+    font-size: 1rem;
+    color: white;
+}
 /* _content/CodeTestWexo/Components/Pages/TrendingMovie.razor.rz.scp.css */
 /* General styling */
 .movies-grid[b-47wfdtn8vr] {

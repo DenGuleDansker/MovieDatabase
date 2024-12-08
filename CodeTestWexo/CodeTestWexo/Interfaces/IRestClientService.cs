@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace CodeTestWexo.Services;
+namespace CodeTestWexo.Interfaces;
 
 public interface IRestClientService
 {

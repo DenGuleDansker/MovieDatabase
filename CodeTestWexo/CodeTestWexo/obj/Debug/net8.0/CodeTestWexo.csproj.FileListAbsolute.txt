@@ -120,3 +120,4 @@ C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\TrendingMovie.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\GenresHomePage.razor.rz.scp.css
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\RandomMoviePicker.razor.rz.scp.css

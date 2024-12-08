@@ -15,7 +15,6 @@ else
     <div class="movie-details-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@($"https://image.tmdb.org/t/p/original{movie.BackdropPath}")'); background-size: cover; background-position: center;">
         <div class="movie-details-grid">
             <div class="movie-poster-container">
-                <!-- Movie Poster -->
                 @if (!string.IsNullOrEmpty(movie.PosterPath))
                 {
                     <img src="@($"https://image.tmdb.org/t/p/w500{movie.PosterPath}")" class="movie-poster" alt="@movie?.Title"/>
@@ -26,23 +25,23 @@ else
                 <h3>@movie?.Title</h3>
 
                 <p>
-                    <strong>Description:</strong> @movie.Overview
+                    <strong>Description:</strong> @movie?.Overview
                 </p>
 
                 <p>
-                    <strong>Release Year:</strong> @movie.ReleaseDate.Year
+                    <strong>Release Year:</strong> @movie?.ReleaseDate.Year
                 </p>
 
                 <p>
-                    <strong>Rating:</strong> @movie.VoteAverage.ToString("F1")
+                    <strong>Rating:</strong> @movie?.VoteAverage.ToString("F1")
                 </p>
 
                 <p>
-                    <strong>Overall votes:</strong> @movie.VoteCount
+                    <strong>Overall votes:</strong> @movie?.VoteCount
                 </p>
-
+                
                 <p>
-                    <strong>Genre(s):</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))
+                    <strong>Genre(s):</strong> @string.Join(", ", movie!.Genres.Select(g => g.Name))
                 </p>
 
                 <button @onclick="ToggleWishlist" class="wishlist-btn @GetButtonClass()">
@@ -59,7 +58,7 @@ else
         </div>
     </div>
     <div class="video-container">
-        @if (videos.FirstOrDefault(v => v.Type.ToLower() == "trailer") is Video trailer)
+        @if (videos.FirstOrDefault(v => v.Type?.ToLower() == "trailer") is Video trailer)
         {
             <h4>Watch Trailer</h4>
             <div class="video-item">
@@ -72,9 +71,7 @@ else
         }
     </div>
 
-    
-    <!-- Actor Section -->
-    <div class="actors-container">
+        <div class="actors-container">
         <h4>Actors:</h4>
         @if (actors == null || !actors.Any())
         {

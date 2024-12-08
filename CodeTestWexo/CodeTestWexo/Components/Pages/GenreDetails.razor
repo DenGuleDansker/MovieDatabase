@@ -7,7 +7,7 @@
 <h3>@genreName</h3>
 <p>Total Movies: @paginatedMovies.TotalResults</p>
 
-@if (paginatedMovies.Movies == null)
+@if (paginatedMovies?.Movies == null)
 {
     <p>Loading movies...</p>
 }
@@ -30,6 +30,6 @@ else
 <!-- Pagination Controls -->
 <div class="pagination">
     <button @onclick="() => ChangePage(-1)" disabled="@IsPreviousDisabled()">Previous</button>
-    <span>Page @paginatedMovies.CurrentPage of @paginatedMovies.TotalPages</span>
+    <span>Page @paginatedMovies?.CurrentPage of @paginatedMovies?.TotalPages</span>
     <button @onclick="() => ChangePage(1)" disabled="@IsNextDisabled()">Next</button>
 </div>

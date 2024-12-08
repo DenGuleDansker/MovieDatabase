@@ -2,5 +2,5 @@
 
 public class GenreResponse
 {
-    public List<Genre> Genres { get; set; }
+    public List<Genre>? Genres { get; set; }
 }
