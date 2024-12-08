@@ -30,6 +30,8 @@ git clone <repository-url>
 cd moviedatabase
 
 cd codetestwexo
+
+cd codetestwexo
 ```
 ## 4. Restore Dependencies
 ```bash
