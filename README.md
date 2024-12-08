@@ -26,7 +26,7 @@ winget install Microsoft.DotNet.SDK.8
 
 ### 2. Clone the project
 ```bash
-git clone [<repository-url>](https://github.com/DenGuleDansker/MovieDatabase.git)
+git clone https://github.com/DenGuleDansker/MovieDatabase.git
 ```
 
 ## 3. Navigate to the Project Folder
