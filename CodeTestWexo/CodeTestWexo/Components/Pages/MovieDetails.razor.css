@@ -30,31 +30,71 @@
     margin-bottom: 8px;
 }
 
-.actors-container {
-    margin-top: 40px;
+.actors-section {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;            /* Add padding for spacing */
+    border-radius: 5px;       /* Optional: Add rounded corners */
+    margin-bottom: 20px;      /* Add spacing below the section */
 }
-
 .actors-row {
     display: flex;
-    gap: 16px;
-    justify-content: flex-start;
-    flex-wrap: wrap; /* Wrap actors if more than 4 */
+    flex-wrap: wrap;          /* Ensure rows wrap for smaller screens */
+    gap: 15px;                /* Add spacing between actor items */
+}
+.actor-item {
+    text-align: center;        /* Center-align actor details */
+    background-color: #fff;    /* White background for contrast */
+    padding: 10px;             /* Add padding for spacing */
+    border-radius: 5px;        /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle grey shadow */
+    margin: 10px;              /* Add spacing around actor items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
-.actor-item {
-    text-align: center;
-    width: 150px;
-    flex-shrink: 0; /* Prevent shrinking */
+.actor-item:hover {
+    transform: scale(1.05);    /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
 }
 
 .actor-item img {
     width: 100%;
     max-width: 120px;
     height: auto;
-    border-radius: 30%;
+    border-radius: 5%;
     margin-bottom: 10px;
 }
 
 .actor-item p {
     font-size: 14px;
 }
+
+.wishlist-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.green-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.green-btn:hover {
+    background-color: #218838; /* Darker Green on Hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.red-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.red-btn:hover {
+    background-color: #c82333; /* Darker Red on Hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+

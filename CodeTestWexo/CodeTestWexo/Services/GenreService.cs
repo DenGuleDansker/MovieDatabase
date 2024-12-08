@@ -42,7 +42,7 @@ public class GenreService(IRestClientService restClientService) : IGenreService
         if (movieList == null)
             return new PaginatedMovies();
 
-        var defaultTotalPages = 10;
+        var defaultTotalPages = 25;
         
         return new PaginatedMovies
         {

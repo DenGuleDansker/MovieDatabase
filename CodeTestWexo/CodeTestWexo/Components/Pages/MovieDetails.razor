@@ -23,39 +23,36 @@ else
             </div>
 
             <div class="movie-info">
-                <!-- Movie Title -->
                 <h3>@movie?.Title</h3>
 
-                <!-- Overview -->
                 <p>
                     <strong>Description:</strong> @movie.Overview
                 </p>
 
-                <!-- Release Year -->
                 <p>
                     <strong>Release Year:</strong> @movie.ReleaseDate.Year
                 </p>
                 
                 <p>
-                    <strong>Rating</strong> @movie.VoteAverage.ToString("F1")
+                    <strong>Rating:</strong> @movie.VoteAverage.ToString("F1")
                 </p>
                 
                 <p>
-                    <strong>Overall votes</strong> @movie.VoteCount
+                    <strong>Overall votes:</strong> @movie.VoteCount
                 </p>  
                 
                 <p>
                     <strong>Genre(s):</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))
                 </p>
 
-                <button @onclick="ToggleWishlist" class="wishlist-btn">
+                <button @onclick="ToggleWishlist" class="wishlist-btn @GetButtonClass()">
                     @if (wishlist.Contains(movie.Id))
                     {
-                        <span>Remove from Wishlist</span>
+                    <span>Remove from Wishlist</span>
                     }
                     else
                     {
-                        <span>Add to Wishlist</span>
+                    <span>Add to Wishlist</span>
                     }
                 </button>
             </div>
@@ -84,7 +81,7 @@ else
                             <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
                         }
                         <p>@actor.Name</p>
-                        <p>@actor.KnownForDepartment</p>
+                        <p>Role : @actor.KnownForDepartment</p>
                     </div>
                 }
             </div>

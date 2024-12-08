@@ -14,7 +14,7 @@
 else
 {
     <div class="movies-grid">
-        @foreach (var movie in paginatedMovies.Movies.Take(16))
+        @foreach (var movie in paginatedMovies.Movies.Take(14))
         {
             <div class="movie-item">
                 <img src="@($"https://image.tmdb.org/t/p/w500{movie.PosterPath}")" alt="@movie.Title" />

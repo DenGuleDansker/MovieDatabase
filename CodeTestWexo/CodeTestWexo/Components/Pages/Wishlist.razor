@@ -9,17 +9,23 @@
 <h3>Your Wishlist</h3>
 
 <div class="wishlist-container">
-    @foreach (var movie in wishlist)
+    @if (wishlist == null || !wishlist.Any())
     {
-        <div class="wishlist-item">
-            <!-- Wrap the movie poster in a clickable element -->
-            <a @onclick="() => RedirectToMoviePage(movie.Id)">
-                <img src="@($"https://image.tmdb.org/t/p/w200{movie.PosterPath}")" alt="@movie.Title" class="wishlist-poster"/>
-            </a>
-            <div class="movie-details">
-                <p>@movie.Title</p>
-                <button @onclick="() => RemoveFromWishlist(movie.Id)">Remove from Wishlist</button>
+        <p>Add something to your wishlist...</p>
+    }
+    else 
+    {
+        @foreach (var movie in wishlist)
+        {
+            <div class="wishlist-item">
+                <a @onclick="() => RedirectToMoviePage(movie.Id)">
+                    <img src="@($"https://image.tmdb.org/t/p/w200{movie.PosterPath}")" alt="@movie.Title" class="wishlist-poster"/>
+                </a>
+                <div class="movie-details">
+                    <p>@movie.Title</p>
+                    <button @onclick="() => RemoveFromWishlist(movie.Id)">Remove from Wishlist</button>
+                </div>
             </div>
-        </div>
+        }
     }
 </div>

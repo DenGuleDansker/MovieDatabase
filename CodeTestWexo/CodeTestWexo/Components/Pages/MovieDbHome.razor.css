@@ -14,7 +14,7 @@
 .movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjusts column size */
-    gap: 50px; /* Space between items */
+    gap: 15px; /* Space between items */
     padding: 50px;
 }
 
@@ -75,4 +75,22 @@
 
 .load-more-button:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .movie-item {
+        justify-content: center; 
+        max-width: 90%;        
+        margin: -10px !important;      
+    }
+
+    .movie-poster {
+        max-width: 100%;       
+        margin-bottom: 10px;  
+    }
+
+    .movie-item button {
+        width: 100%;         
+    }
+    
 }

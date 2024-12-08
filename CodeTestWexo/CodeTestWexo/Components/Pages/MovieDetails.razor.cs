@@ -36,4 +36,8 @@ public partial class MovieDetails
         // Save the updated wishlist to localStorage
         await localStorage.SetItemAsync("wishlist", wishlist);
     }
+    private string GetButtonClass()
+    {
+        return wishlist.Contains(movie.Id) ? "red-btn" : "green-btn";
+    }
 }

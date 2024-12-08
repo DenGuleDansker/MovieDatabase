@@ -137,10 +137,10 @@ body[b-69k8r7afcp] {
 .bi[b-ia5gpc78q7] {
     display: inline-block;
     position: relative;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.0rem;
+    height: 1.5rem;
     margin-right: 0.75rem;
-    top: -1px;
+    top: -11px;
     background-size: cover;
 }
 
@@ -221,8 +221,8 @@ body[b-69k8r7afcp] {
 .movies-grid[b-sdl9w3h068] {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Make the grid dynamic */
-    gap: 16px;
-    padding: 16px;
+    gap: 12px !important;
+    padding: 10px;
 }
 
 .movie-item[b-sdl9w3h068] {
@@ -240,7 +240,7 @@ body[b-69k8r7afcp] {
 
 .movie-item img[b-sdl9w3h068] {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover; /* Ensures images cover the area without stretching */
 }
 
@@ -283,6 +283,48 @@ body[b-69k8r7afcp] {
 .page-btn:hover[b-sdl9w3h068] {
     background-color: #0056b3;
 }
+
+.pagination button[b-sdl9w3h068] {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination[b-sdl9w3h068] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .pagination[b-sdl9w3h068] {
+        position: fixed; /* Make pagination fixed */
+        top: 770px; /* Move slightly down from the top */
+        left: 0;
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Add padding for better usability */
+        background-color: #fff; /* Optional: Add a background for contrast */
+        z-index: 100; /* Ensure it stays above other elements */
+        border-bottom: 1px solid #ccc; /* Optional: Add a divider */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+    }
+
+    .movie-item img[b-sdl9w3h068] {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+
+}
 /* _content/CodeTestWexo/Components/Pages/MovieDbHome.razor.rz.scp.css */
 .genre-section[b-j5xuy0mhwr] {
     margin-bottom: 20px;
@@ -300,7 +342,7 @@ body[b-69k8r7afcp] {
 .movies-grid[b-j5xuy0mhwr] {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjusts column size */
-    gap: 50px; /* Space between items */
+    gap: 15px; /* Space between items */
     padding: 50px;
 }
 
@@ -362,6 +404,24 @@ body[b-69k8r7afcp] {
 .load-more-button:hover[b-j5xuy0mhwr] {
     background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+    .movie-item[b-j5xuy0mhwr] {
+        justify-content: center; 
+        max-width: 90%;        
+        margin: -10px !important;      
+    }
+
+    .movie-poster[b-j5xuy0mhwr] {
+        max-width: 100%;       
+        margin-bottom: 10px;  
+    }
+
+    .movie-item button[b-j5xuy0mhwr] {
+        width: 100%;         
+    }
+    
+}
 /* _content/CodeTestWexo/Components/Pages/MovieDetails.razor.rz.scp.css */
 .movie-details-cover[b-ppw9tb1rus] {
     position: relative;
@@ -395,34 +455,74 @@ body[b-69k8r7afcp] {
     margin-bottom: 8px;
 }
 
-.actors-container[b-ppw9tb1rus] {
-    margin-top: 40px;
+.actors-section[b-ppw9tb1rus] {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;            /* Add padding for spacing */
+    border-radius: 5px;       /* Optional: Add rounded corners */
+    margin-bottom: 20px;      /* Add spacing below the section */
 }
-
 .actors-row[b-ppw9tb1rus] {
     display: flex;
-    gap: 16px;
-    justify-content: flex-start;
-    flex-wrap: wrap; /* Wrap actors if more than 4 */
+    flex-wrap: wrap;          /* Ensure rows wrap for smaller screens */
+    gap: 15px;                /* Add spacing between actor items */
+}
+.actor-item[b-ppw9tb1rus] {
+    text-align: center;        /* Center-align actor details */
+    background-color: #fff;    /* White background for contrast */
+    padding: 10px;             /* Add padding for spacing */
+    border-radius: 5px;        /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle grey shadow */
+    margin: 10px;              /* Add spacing around actor items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
-.actor-item[b-ppw9tb1rus] {
-    text-align: center;
-    width: 150px;
-    flex-shrink: 0; /* Prevent shrinking */
+.actor-item:hover[b-ppw9tb1rus] {
+    transform: scale(1.05);    /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
 }
 
 .actor-item img[b-ppw9tb1rus] {
     width: 100%;
     max-width: 120px;
     height: auto;
-    border-radius: 30%;
+    border-radius: 5%;
     margin-bottom: 10px;
 }
 
 .actor-item p[b-ppw9tb1rus] {
     font-size: 14px;
 }
+
+.wishlist-btn[b-ppw9tb1rus] {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.green-btn[b-ppw9tb1rus] {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.green-btn:hover[b-ppw9tb1rus] {
+    background-color: #218838; /* Darker Green on Hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.red-btn[b-ppw9tb1rus] {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.red-btn:hover[b-ppw9tb1rus] {
+    background-color: #c82333; /* Darker Red on Hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
 /* _content/CodeTestWexo/Components/Pages/Wishlist.razor.rz.scp.css */
 .wishlist-container[b-lh3ciamr6e] {
     display: grid;

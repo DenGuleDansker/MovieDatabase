@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj": {}
+    "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj": {
+    "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
+        "projectUniqueName": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
         "projectName": "CodeTestWexo",
-        "projectPath": "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
+        "projectPath": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
         "packagesPath": "C:\\Users\\chili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chili\\RiderProjects\\CodeTestWexo\\CodeTestWexo\\obj\\",
+        "outputPath": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chili\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,6 +20,7 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\chili\\.dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
