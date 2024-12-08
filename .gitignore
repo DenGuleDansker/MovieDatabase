@@ -1,0 +1,28 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.vs/
+*.suo
+*.psess
+.vscode/
+
+# Logs
+*.log
+
+# IDE-specific files
+.idea/
+*.Rider/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Configuration files
+appsettings*.json
+appsettings*.Development.json
+
+# Dependencies
+packages/
