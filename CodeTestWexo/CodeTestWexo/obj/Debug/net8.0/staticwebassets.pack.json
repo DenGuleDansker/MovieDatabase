@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CodeTestWexo.bundle.scp.css",
-      "PackagePath": "staticwebassets\\CodeTestWexo.sv1sfts93t.bundle.scp.css"
+      "PackagePath": "staticwebassets\\CodeTestWexo.zqmwzyulj3.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\app.css",
@@ -15,6 +15,10 @@
     {
       "Id": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\cookie.js",
+      "PackagePath": "staticwebassets\\cookie.js"
     },
     {
       "Id": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\favicon.png",

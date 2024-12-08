@@ -1,6 +1,6 @@
 ﻿namespace CodeTestWexo.Components.Models;
 
-public class GenreList
+public class GenreResponse
 {
     public List<Genre> Genres { get; set; }
 }

@@ -4,5 +4,5 @@ namespace CodeTestWexo.Interfaces;
 
 public interface ICreditService
 {
-    Task<List<Actor>> GetActorsByMovieIdAsync(int movieId);
+    Task<List<CastCredits>> GetActorsByMovieIdAsync(int movieId);
 }

@@ -2,7 +2,7 @@
 
 namespace CodeTestWexo.Components.Models;
 
-public class MovieList
+public class MovieResponse
 {
     public List<Movie> Results { get; set; }
     public int TotalPages { get; set; }

@@ -2,5 +2,5 @@
 
 public class CreditsResponse
 {
-    public List<Actor> Cast { get; set; }
+    public List<CastCredits> Cast { get; set; }
 }

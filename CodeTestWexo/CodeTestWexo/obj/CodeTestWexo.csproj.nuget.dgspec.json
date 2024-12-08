@@ -44,6 +44,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AltairCA.Blazor.WebAssembly.Cookie": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Blazored.LocalStorage": {
               "target": "Package",
               "version": "[4.5.0, )"

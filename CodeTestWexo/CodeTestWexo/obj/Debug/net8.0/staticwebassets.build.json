@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l2kdJIqCp2gGF+EFWekwq0isgpL5bHkMdS/eH5/t0p4=",
+  "Hash": "IJPeTPWLV3/dvCEbvliKePRX0OF7yBHPx9vccr/Txkg=",
   "Source": "CodeTestWexo",
   "BasePath": "_content/CodeTestWexo",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "sv1sfts93t",
-      "Integrity": "eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=",
+      "Fingerprint": "zqmwzyulj3",
+      "Integrity": "1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CodeTestWexo.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "sv1sfts93t",
-      "Integrity": "eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=",
+      "Fingerprint": "zqmwzyulj3",
+      "Integrity": "1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CodeTestWexo.bundle.scp.css"
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\cookie.js",
+      "SourceId": "CodeTestWexo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\",
+      "BasePath": "_content/CodeTestWexo",
+      "RelativePath": "cookie#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wjuiwum4je",
+      "Integrity": "1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cookie.js"
     },
     {
       "Identity": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\favicon.png",
@@ -401,7 +422,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15619"
+          "Value": "18486"
         },
         {
           "Name": "Content-Type",
@@ -409,11 +430,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=\""
+          "Value": "\"1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 10:11:44 GMT"
+          "Value": "Sun, 08 Dec 2024 12:30:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -423,7 +444,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM="
+          "Value": "sha256-1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0="
         }
       ]
     },
@@ -438,7 +459,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15619"
+          "Value": "18486"
         },
         {
           "Name": "Content-Type",
@@ -446,11 +467,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=\""
+          "Value": "\"1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 10:11:44 GMT"
+          "Value": "Sun, 08 Dec 2024 12:30:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -460,12 +481,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM="
+          "Value": "sha256-1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0="
         }
       ]
     },
     {
-      "Route": "CodeTestWexo.sv1sfts93t.bundle.scp.css",
+      "Route": "CodeTestWexo.zqmwzyulj3.bundle.scp.css",
       "AssetFile": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CodeTestWexo.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -475,7 +496,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15619"
+          "Value": "18486"
         },
         {
           "Name": "Content-Type",
@@ -483,11 +504,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=\""
+          "Value": "\"1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 10:11:44 GMT"
+          "Value": "Sun, 08 Dec 2024 12:30:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -497,7 +518,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sv1sfts93t"
+          "Value": "zqmwzyulj3"
         },
         {
           "Name": "label",
@@ -505,12 +526,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM="
+          "Value": "sha256-1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0="
         }
       ]
     },
     {
-      "Route": "CodeTestWexo.sv1sfts93t.styles.css",
+      "Route": "CodeTestWexo.zqmwzyulj3.styles.css",
       "AssetFile": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CodeTestWexo.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -520,7 +541,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15619"
+          "Value": "18486"
         },
         {
           "Name": "Content-Type",
@@ -528,11 +549,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=\""
+          "Value": "\"1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 10:11:44 GMT"
+          "Value": "Sun, 08 Dec 2024 12:30:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -542,7 +563,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sv1sfts93t"
+          "Value": "zqmwzyulj3"
         },
         {
           "Name": "label",
@@ -550,7 +571,89 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM="
+          "Value": "sha256-1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0="
+        }
+      ]
+    },
+    {
+      "Route": "cookie.js",
+      "AssetFile": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\cookie.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Dec 2024 11:27:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo="
+        }
+      ]
+    },
+    {
+      "Route": "cookie.wjuiwum4je.js",
+      "AssetFile": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\wwwroot\\cookie.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Dec 2024 11:27:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wjuiwum4je"
+        },
+        {
+          "Name": "label",
+          "Value": "cookie.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo="
         }
       ]
     },

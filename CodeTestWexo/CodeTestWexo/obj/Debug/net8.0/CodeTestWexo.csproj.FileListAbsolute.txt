@@ -100,7 +100,6 @@ C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\GenreDetails.razor.rz.scp.css
-C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieDbHome.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieDetails.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\Wishlist.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\bundle\CodeTestWexo.styles.css
@@ -117,3 +116,7 @@ C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\CodeTest.C1F08292.Up2Date
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\CodeTestWexo.genruntimeconfig.cache
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\ref\CodeTestWexo.dll
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\AltairCA.Blazor.WebAssembly.Cookie.dll
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\TrendingMovie.razor.rz.scp.css
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\GenresHomePage.razor.rz.scp.css

@@ -17,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15619"
+          "Value": "18486"
         },
         {
           "Name": "Content-Type",
@@ -25,22 +25,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=\""
+          "Value": "\"1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 10:11:44 GMT"
+          "Value": "Sun, 08 Dec 2024 12:30:31 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM="
+          "Value": "sha256-1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0="
         }
       ]
     },
     {
-      "Route": "CodeTestWexo.sv1sfts93t.styles.css",
+      "Route": "CodeTestWexo.zqmwzyulj3.styles.css",
       "AssetFile": "CodeTestWexo.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54,7 +54,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15619"
+          "Value": "18486"
         },
         {
           "Name": "Content-Type",
@@ -62,21 +62,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM=\""
+          "Value": "\"1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 10:11:44 GMT"
+          "Value": "Sun, 08 Dec 2024 12:30:31 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sv1sfts93t"
+          "Value": "zqmwzyulj3"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eASaOFEpMYLQfdvKDOJnbpoz5UbU8DtmM+o3K8kzZbM="
+          "Value": "sha256-1dnPFRixLVvPy3FCGXpS9X8FmGqx565wYjrOIsxsjH0="
         },
         {
           "Name": "label",
@@ -327,6 +327,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "cookie.js",
+      "AssetFile": "cookie.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Dec 2024 11:27:32 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo="
+        }
+      ]
+    },
+    {
+      "Route": "cookie.wjuiwum4je.js",
+      "AssetFile": "cookie.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Dec 2024 11:27:32 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wjuiwum4je"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Nx/Ufrdp3rDVDylrevANYWnETMp4OYXLtYcoM+DvMo="
+        },
+        {
+          "Name": "label",
+          "Value": "cookie.js"
         }
       ]
     },

@@ -17,7 +17,7 @@ public class GenreService(IRestClientService restClientService) : IGenreService
         if (response?.Content == null)
             return new List<Genre>();
 
-        var genreList = JsonSerializer.Deserialize<GenreList>(response.Content, new JsonSerializerOptions
+        var genreList = JsonSerializer.Deserialize<GenreResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });
@@ -34,7 +34,7 @@ public class GenreService(IRestClientService restClientService) : IGenreService
         if (response?.Content == null)
             return new PaginatedMovies();
 
-        var movieList = JsonSerializer.Deserialize<MovieList>(response.Content, new JsonSerializerOptions
+        var movieList = JsonSerializer.Deserialize<MovieResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });

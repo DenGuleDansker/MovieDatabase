@@ -15,6 +15,7 @@ builder.Services.AddScoped<ICreditService, CreditsService>();
 builder.Services.AddScoped<IRestClientService, RestClientService>();
 builder.Services.AddBlazoredLocalStorage();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

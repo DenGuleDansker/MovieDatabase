@@ -1,0 +1,51 @@
+﻿@page "/trendingmovies"
+@using CodeTestWexo.Components.Models
+@using CodeTestWexo.Interfaces
+@rendermode InteractiveServer
+@inject IMovieService MovieService
+@inject NavigationManager NavigationManager
+
+<h3>Trending Movies</h3>
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="movies-grid">
+        @foreach (var movie in movies.Results)
+        {
+            <div class="movie-item">
+                <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="@movie.Title"/>
+                <p>@movie.Title</p>
+                <button @onclick="() => NavigateToMovieDetails(movie.Id)">View Details</button>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private MovieTrendingResponse movies;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+// Simply load movies when the page is initialized
+        await LoadMovies();
+    }
+
+    private async Task LoadMovies()
+    {
+// Fetch movie discover data
+        movies = await MovieService.GetTrendingMoviesAsync();
+        isLoading = false; // Stop loading once movies are fetched
+        StateHasChanged(); // Ensure UI is updated after data load
+    }
+
+    private void NavigateToMovieDetails(int movieId)
+    {
+        NavigationManager.NavigateTo($"/movie/{movieId}");
+    }
+
+}

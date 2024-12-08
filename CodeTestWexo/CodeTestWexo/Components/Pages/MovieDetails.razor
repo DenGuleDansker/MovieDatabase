@@ -32,15 +32,15 @@ else
                 <p>
                     <strong>Release Year:</strong> @movie.ReleaseDate.Year
                 </p>
-                
+
                 <p>
                     <strong>Rating:</strong> @movie.VoteAverage.ToString("F1")
                 </p>
-                
+
                 <p>
                     <strong>Overall votes:</strong> @movie.VoteCount
-                </p>  
-                
+                </p>
+
                 <p>
                     <strong>Genre(s):</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))
                 </p>
@@ -48,17 +48,31 @@ else
                 <button @onclick="ToggleWishlist" class="wishlist-btn @GetButtonClass()">
                     @if (wishlist.Contains(movie.Id))
                     {
-                    <span>Remove from Wishlist</span>
+                        <span>Remove from Wishlist</span>
                     }
                     else
                     {
-                    <span>Add to Wishlist</span>
+                        <span>Add to Wishlist</span>
                     }
                 </button>
             </div>
         </div>
     </div>
+    <div class="video-container">
+        @if (videos.FirstOrDefault(v => v.Type.ToLower() == "trailer") is Video trailer)
+        {
+            <h4>Watch Trailer</h4>
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/@trailer.Key" frameborder="0" allowfullscreen></iframe>
+            </div>
+        }
+        else
+        {
+            <p>No trailers available</p>
+        }
+    </div>
 
+    
     <!-- Actor Section -->
     <div class="actors-container">
         <h4>Actors:</h4>

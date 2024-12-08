@@ -3,7 +3,7 @@
 namespace CodeTestWexo.Components.Models;
 
 
-public class Actor
+public class CastCredits
 {
     public string Name { get; set; }
     [JsonPropertyName("profile_path")]

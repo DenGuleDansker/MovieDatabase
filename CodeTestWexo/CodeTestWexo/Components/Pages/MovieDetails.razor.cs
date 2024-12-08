@@ -7,7 +7,8 @@ public partial class MovieDetails
 {
     [Parameter] public int movieId { get; set; }
     private Movie movie;
-    private List<Actor> actors = new List<Actor>();
+    private List<Video> videos = new();
+    private List<CastCredits> actors = new List<CastCredits>();
     private List<int> wishlist = new List<int>(); // Store movie IDs that are in the wishlist
 
     protected override async Task OnInitializedAsync()
@@ -18,6 +19,9 @@ public partial class MovieDetails
         // Fetch movie actors
         actors = await CreditsService.GetActorsByMovieIdAsync(movieId);
 
+        //Fetch Trailers 
+        videos = await MovieService.GetMovieVideosAsync(movieId);
+        
         // Retrieve the current wishlist from localStorage
         wishlist = await localStorage.GetItemAsync<List<int>>("wishlist") ?? new List<int>();
     }
