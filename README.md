@@ -46,3 +46,7 @@ dotnet build
 dotnet run
 ```
 
+## License :memo:
+
+This project is [MIT](LICENCE) licensed.
+
