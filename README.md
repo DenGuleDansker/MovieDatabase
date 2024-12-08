@@ -4,7 +4,7 @@ This is a Movie Database application built with .NET 8 and Blazor. It fetches mo
 
 ## Requirements
 
-- .NET 8 SDK or higher
+- .NET 8 SDK 
 - A browser to view the app
 - An API key for The Movie Database (TMDb) API (if necessary, replace the API key in the project)
 
