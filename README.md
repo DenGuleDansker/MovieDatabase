@@ -19,14 +19,30 @@ Make sure you have .NET 8 SDK installed on your machine. You can check this by r
 ```bash
 dotnet --version
 ```
-git clone <repository-url>
 
+### 2. Clone the project
+```bash
+git clone <repository-url>
+```
+
+## 3. Navigate to the Project Folder
+```bash
 cd moviedatabase
 
 cd codetestwexo
-
+```
+## 4. Restore Dependencies
+```bash
 dotnet restore
+```
+## 5. Build the Project
 
+```bash
 dotnet build
+```
+6. Run the Application
 
+```bash
 dotnet run
+```
+
