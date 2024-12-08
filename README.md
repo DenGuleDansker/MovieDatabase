@@ -18,3 +18,15 @@ Make sure you have .NET 8 SDK installed on your machine. You can check this by r
 
 ```bash
 dotnet --version
+```
+git clone <repository-url>
+
+cd moviedatabase
+
+cd codetestwexo
+
+dotnet restore
+
+dotnet build
+
+dotnet run
