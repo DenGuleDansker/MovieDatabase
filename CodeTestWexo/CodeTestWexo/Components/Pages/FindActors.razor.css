@@ -89,8 +89,9 @@
         width: 80%;
     }
 
+    /* Grid: Display two actors per row on medium screens (>= 480px and < 768px) */
     .actors-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -99,6 +100,7 @@
         width: 100%;
     }
 
+    /* Grid: Display one actor per row on smaller screens */
     .actors-grid {
         grid-template-columns: 1fr;
     }

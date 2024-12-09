@@ -7,7 +7,7 @@
 <h3>Search Actors</h3>
 
 <div class="search-container">
-    <input type="text" id="actorSearchInput" @bind="searchQuery" @oninput="OnInputSearch" placeholder="Search actors..."/>
+    <input type="text" id="actorSearchInput" @bind="searchQuery" @oninput="OnInputSearch" placeholder="Search actors..." />
 </div>
 
 @if (isLoading)
@@ -21,17 +21,18 @@ else if (searchResults?.Any() == true)
         {
             @if (result.MediaType == "person") // Only show actors
             {
-                @* <div class="actor-item" @onclick="() => NavigateToActorDetails(result)"> *@
+                <div class="actor-item" @onclick="() => NavigateToActorDetails(result)">
                     @if (!string.IsNullOrEmpty(result.ProfilePath))
                     {
-                        <img src="https://image.tmdb.org/t/p/w500/@result.ProfilePath" alt="@result.Title"/>
+                        <img src="https://image.tmdb.org/t/p/w500/@result.ProfilePath" alt="@result.Title" />
                     }
                     else
                     {
-                        <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                    <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
                     }
                     <p>@result.Title</p>
-                // </div>
+
+                </div>
             }
         }
     </div>
@@ -59,21 +60,20 @@ else
         searchQuery = query;
         if (string.IsNullOrWhiteSpace(searchQuery))
         {
-            searchResults = new List<SearchItem>(); // Clear results if the search is empty
+            searchResults = new List<SearchItem>();  // Clear results if the search is empty
             return;
         }
 
         isLoading = true;
         var response = await searchRepository.GetSearchDetailsAsync(searchQuery);
-        searchResults = response?.Results?.Where(r => r.MediaType == "person").ToList() ?? new List<SearchItem>(); // Filter for actors only
+        searchResults = response?.Results?.Where(r => r.MediaType == "person").ToList() ?? new List<SearchItem>();  // Filter for actors only
         isLoading = false;
     }
 
     // Navigate to actor details page (functionality to be implemented)
-    // private void NavigateToActorDetails(SearchItem item)
-    // {
-    //     // Navigation logic (e.g., to actor detail page)
-    //     NavigationManager.NavigateTo($"/actor/{item.Id}");
-    // }
-
+    private void NavigateToActorDetails(SearchItem item)
+    {
+        // Navigation logic (e.g., to actor detail page)
+        NavigationManager.NavigateTo($"/actor/{item.Id}");
+    }
 }
