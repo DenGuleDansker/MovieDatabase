@@ -1,0 +1,79 @@
+@page "/search-actors"
+@using CodeTestWexo.Interfaces
+@using CodeTestWexo.Models.Search
+@inject ISearchRepository searchRepository
+@inject NavigationManager NavigationManager
+
+<h3>Search Actors</h3>
+
+<div class="search-container">
+    <input type="text" id="actorSearchInput" @bind="searchQuery" @oninput="OnInputSearch" placeholder="Search actors..."/>
+</div>
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else if (searchResults?.Any() == true)
+{
+    <div class="actors-grid">
+        @foreach (var result in searchResults)
+        {
+            @if (result.MediaType == "person") // Only show actors
+            {
+                @* <div class="actor-item" @onclick="() => NavigateToActorDetails(result)"> *@
+                    @if (!string.IsNullOrEmpty(result.ProfilePath))
+                    {
+                        <img src="https://image.tmdb.org/t/p/w500/@result.ProfilePath" alt="@result.Title"/>
+                    }
+                    else
+                    {
+                        <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                    }
+                    <p>@result.Title</p>
+                // </div>
+            }
+        }
+    </div>
+}
+else
+{
+    <p>Find your actor.</p>
+}
+
+@code {
+    private string searchQuery = string.Empty;
+    private bool isLoading = false;
+    private List<SearchItem> searchResults = new List<SearchItem>();
+
+    // Trigger search function on input change
+    private async Task OnInputSearch(ChangeEventArgs e)
+    {
+        string query = e.Value.ToString();
+        await PerformSearch(query);
+    }
+
+    // Perform search with a query
+    private async Task PerformSearch(string query)
+    {
+        searchQuery = query;
+        if (string.IsNullOrWhiteSpace(searchQuery))
+        {
+            searchResults = new List<SearchItem>(); // Clear results if the search is empty
+            return;
+        }
+
+        isLoading = true;
+        var response = await searchRepository.GetSearchDetailsAsync(searchQuery);
+        searchResults = response?.Results?.Where(r => r.MediaType == "person").ToList() ?? new List<SearchItem>(); // Filter for actors only
+        isLoading = false;
+    }
+
+    // Navigate to actor details page (functionality to be implemented)
+    // private void NavigateToActorDetails(SearchItem item)
+    // {
+    //     // Navigation logic (e.g., to actor detail page)
+    //     NavigationManager.NavigateTo($"/actor/{item.Id}");
+    // }
+
+}

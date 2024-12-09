@@ -166,3 +166,4 @@ C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\SerieGenreDetails.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\SerieDetails.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\Trending.razor.rz.scp.css
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\FindActors.razor.rz.scp.css

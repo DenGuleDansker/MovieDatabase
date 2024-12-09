@@ -213,6 +213,112 @@ body[b-69k8r7afcp] {
         overflow-y: auto;
     }
 }
+/* _content/CodeTestWexo/Components/Pages/FindActors.razor.rz.scp.css */
+/* Search container and input styling */
+.search-container[b-su6ubolzvy] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input[b-su6ubolzvy] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus[b-su6ubolzvy] {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Actors grid layout */
+.actors-grid[b-su6ubolzvy] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Actor item styling */
+.actor-item[b-su6ubolzvy] {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.actor-item:hover[b-su6ubolzvy] {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Actor image styling */
+.actor-item img[b-su6ubolzvy] {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+
+/* Actor name styling */
+.actor-item p[b-su6ubolzvy] {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+/* Loading and no results message */
+.loading-message[b-su6ubolzvy], .no-results-message[b-su6ubolzvy] {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-top: 50px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .search-container input[b-su6ubolzvy] {
+        width: 80%;
+    }
+
+    .actors-grid[b-su6ubolzvy] {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container input[b-su6ubolzvy] {
+        width: 100%;
+    }
+
+    .actors-grid[b-su6ubolzvy] {
+        grid-template-columns: 1fr;
+    }
+}
 /* _content/CodeTestWexo/Components/Pages/MovieDetails.razor.rz.scp.css */
 .movie-details-cover[b-ppw9tb1rus] {
     position: relative;
@@ -1062,6 +1168,69 @@ iframe[b-9lpeu0npv9] {
 
 
 /* _content/CodeTestWexo/Components/Pages/Trending.razor.rz.scp.css */
+.search-container[b-whk2n056gv] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input[b-whk2n056gv] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus[b-whk2n056gv] {
+    outline: none;
+    border-color: #007bff;
+}
+
+.search-container button[b-whk2n056gv] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover[b-whk2n056gv] {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .search-container[b-whk2n056gv] {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container input[b-whk2n056gv] {
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+
+    .search-container button[b-whk2n056gv] {
+        width: 100%;
+    }
+}
+
+
 .movies-grid[b-whk2n056gv] {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 

@@ -13,6 +13,9 @@ public class SearchItem
 
     [JsonPropertyName("poster_path")]
     public string? PosterPath { get; set; }
+    
+    [JsonPropertyName("profile_path")]
+    public string? ProfilePath { get; set; }
 
     [JsonPropertyName("media_type")]
     public string? MediaType { get; set; } // Nullable to handle missing values

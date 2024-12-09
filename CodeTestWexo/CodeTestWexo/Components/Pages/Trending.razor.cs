@@ -2,6 +2,7 @@
 using CodeTestWexo.Models.Movies;
 using CodeTestWexo.Models.Search;
 using CodeTestWexo.Models.Series;
+using Microsoft.AspNetCore.Components;
 
 namespace CodeTestWexo.Components.Pages;
 
@@ -32,22 +33,28 @@ public partial class Trending
         StateHasChanged();
     }
 
-    private async Task PerformSearch()
+    private async Task OnInputSearch(ChangeEventArgs e)
     {
+        string query = e.Value.ToString();
+        await PerformSearch(query);
+    }
+    
+    // Perform search with a query
+    private async Task PerformSearch(string query)
+    {
+        searchQuery = query;
         if (string.IsNullOrWhiteSpace(searchQuery))
         {
-            searchResults = null;
+            searchResults = new List<SearchItem>();  // Clear results if the search is empty
             return;
         }
 
         isLoading = true;
-
-        // Call the API method to get search results
         var response = await searchRepository.GetSearchDetailsAsync(searchQuery);
-        searchResults = response?.Results;
-
+        searchResults = response?.Results?.Where(r => r.MediaType != "person").ToList() ?? new List<SearchItem>();  // Only show movies/series
         isLoading = false;
     }
+    
     private void NavigateToDetails(SearchItem item)
     {
         if (item == null)

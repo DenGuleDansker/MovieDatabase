@@ -9,8 +9,7 @@
 <h3>Trending</h3>
 
 <div class="search-container">
-    <input type="text" @bind="searchQuery" placeholder="Search movies or series..." />
-    <button @onclick="PerformSearch">Search</button>
+    <input type="text" id="searchInput" placeholder="Search movies or series..." @oninput="OnInputSearch" />
 </div>
 
 @if (isLoading)
@@ -22,12 +21,17 @@ else if (searchResults?.Any() == true)
 <div class="movies-grid">
     @foreach (var result in searchResults)
     {
+    @* Only show if the media type is not "person" *@
+    @if (result.MediaType != "person")
+    {
     <div class="movie-item" @onclick="() => NavigateToDetails(result)">
-        <img src="https://image.tmdb.org/t/p/w500/@result.PosterPath" alt="@result.MediaType" />
+        <img src="https://image.tmdb.org/t/p/w500/@result.PosterPath" alt="@result.Title"/>
         <p>@result.Title</p>
     </div>
     }
+    }
 </div>
+
 }
 
 @if (!isLoading && (searchResults == null || !searchResults.Any()))
