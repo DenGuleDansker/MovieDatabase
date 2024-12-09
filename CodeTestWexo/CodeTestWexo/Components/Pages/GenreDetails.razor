@@ -1,7 +1,7 @@
 ﻿@page "/genre/{genreId:int}"
 @using CodeTestWexo.Interfaces
 @rendermode InteractiveServer
-@inject IGenreService GenreService
+@inject IGenreRepository GenreRepository
 @inject NavigationManager navigationManager
 
 <h3>@genreName</h3>

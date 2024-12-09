@@ -10,10 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddScoped<IMovieService, MovieService>();
-builder.Services.AddScoped<IGenreService, GenreService>();
-builder.Services.AddScoped<ICreditService, CreditsService>();
-builder.Services.AddScoped<IRestClientService, RestClientService>();
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+builder.Services.AddScoped<ICreditRepository, CreditsRepository>();
+builder.Services.AddScoped<IRestClientRepository, RestClientRepository>();
 builder.Services.AddBlazoredLocalStorage();
 
 

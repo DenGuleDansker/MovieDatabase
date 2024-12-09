@@ -5,12 +5,12 @@ using RestSharp;
 
 namespace CodeTestWexo.Repository;
 
-public class GenreService(IRestClientService restClientService, ILogger<GenreService> logger) : IGenreService
+public class GenreRepository(IRestClientRepository restClientRepository, ILogger<GenreRepository> logger) : IGenreRepository
 {
     
     public async Task<List<Genre>> GetGenresAsync()
     {
-        var client = await restClientService.GetClientAsync("https://api.themoviedb.org/3/genre/movie/list");
+        var client = await restClientRepository.GetClientAsync("https://api.themoviedb.org/3/genre/movie/list");
         var request = new RestRequest();
         var response = await client.GetAsync(request);
 
@@ -40,7 +40,7 @@ public class GenreService(IRestClientService restClientService, ILogger<GenreSer
         var defaultTotalPages = 25;
         
         //Use for fetching the showcases for GenresHomePage and for pagination for MovieHomePage
-        var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/discover/movie?with_genres={genreId}&page={page}");
+        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/discover/movie?with_genres={genreId}&page={page}");
         var request = new RestRequest();
         var response = await client.GetAsync(request);
 

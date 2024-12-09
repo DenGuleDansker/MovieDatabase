@@ -2,7 +2,7 @@
 
 namespace CodeTestWexo.Interfaces;
 
-public interface IMovieService
+public interface IMovieRepository
 {
     Task<Movie?> GetMovieDetailsAsync(int movieId);
     Task<MovieTrendingResponse?> GetTrendingMoviesAsync();

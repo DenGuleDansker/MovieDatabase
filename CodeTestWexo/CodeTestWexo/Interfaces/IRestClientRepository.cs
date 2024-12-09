@@ -2,7 +2,7 @@
 
 namespace CodeTestWexo.Interfaces;
 
-public interface IRestClientService
+public interface IRestClientRepository
 {
     Task<RestClient> GetClientAsync(string baseUrl);
 

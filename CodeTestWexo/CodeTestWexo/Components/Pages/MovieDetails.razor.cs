@@ -16,16 +16,16 @@ public partial class MovieDetails
     protected override async Task OnInitializedAsync()
     {
         // Fetch movie details
-        movie = await movieService.GetMovieDetailsAsync(movieId);
+        movie = await MovieRepository.GetMovieDetailsAsync(movieId);
 
         //Fetch Trailers 
-        videos = await movieService.GetMovieVideosAsync(movieId);
+        videos = await MovieRepository.GetMovieVideosAsync(movieId);
 
         // Fetch movie actors
-        casts = await creditsService.GetActorsByMovieIdAsync(movieId);
+        casts = await CreditsRepository.GetActorsByMovieIdAsync(movieId);
 
         //Fetch movie crew
-        crews = await creditsService.GetCrewsByMovieIdAsync(movieId);
+        crews = await CreditsRepository.GetCrewsByMovieIdAsync(movieId);
         
         // Remove duplicates in crews based on their ID
         crews = crews

@@ -2,7 +2,7 @@
 
 namespace CodeTestWexo.Interfaces;
 
-public interface IGenreService
+public interface IGenreRepository
 {
     Task<List<Genre>> GetGenresAsync();
     Task<PaginatedMovies> GetPaginatedMoviesByGenreAsync(int genreId, int page);

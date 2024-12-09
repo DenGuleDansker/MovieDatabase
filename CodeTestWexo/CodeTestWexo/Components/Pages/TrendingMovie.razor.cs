@@ -15,7 +15,7 @@ public partial class TrendingMovie
     private async Task LoadMovies()
     {
         // Fetch movie discover data
-        movies = await MovieService.GetTrendingMoviesAsync();
+        movies = await MovieRepository.GetTrendingMoviesAsync();
 
         // Stop loading once movies are fetched
         isLoading = false;

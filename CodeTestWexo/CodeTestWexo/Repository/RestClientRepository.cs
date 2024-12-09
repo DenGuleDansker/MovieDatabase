@@ -3,7 +3,7 @@ using RestSharp;
 
 namespace CodeTestWexo.Services;
 
-public class RestClientService(IConfiguration configuration) : IRestClientService
+public class RestClientRepository(IConfiguration configuration) : IRestClientRepository
 {
     
     //Using this RestClient for recieving Json responses, while i want to fetch the API

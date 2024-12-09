@@ -17,7 +17,7 @@ public partial class RandomMoviePicker
         try
         {
             isLoading = true;
-            genres = await GenreService.GetGenresAsync();
+            genres = await GenreRepository.GetGenresAsync();
         }
         finally
         {
@@ -36,7 +36,7 @@ public partial class RandomMoviePicker
         isLoading = true;
 
         var movieDiscoverResponse =
-            await GenreService.GetPaginatedMoviesByGenreAsync(selectedGenreId, GenerateRandomNumber());
+            await GenreRepository.GetPaginatedMoviesByGenreAsync(selectedGenreId, GenerateRandomNumber());
 
         filteredMovies = movieDiscoverResponse.Movies
             .Where(movie => movie.VoteAverage >= minRating) 

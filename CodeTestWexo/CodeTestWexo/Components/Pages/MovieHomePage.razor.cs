@@ -15,12 +15,12 @@ namespace CodeTestWexo.Components.Pages
             try
             {
                 //Gets all genre
-                genres = await genreService.GetGenresAsync();
+                genres = await GenreRepository.GetGenresAsync();
 
                 //Gets all movies that belongs to a specific genre in the first page. 
                 foreach (var genre in genres)
                 {
-                    var paginatedMovies = await genreService.GetPaginatedMoviesByGenreAsync(genre.Id, 1);
+                    var paginatedMovies = await GenreRepository.GetPaginatedMoviesByGenreAsync(genre.Id, 1);
                     genreMovies[genre.Id] = paginatedMovies.Movies;
                     movieCountsPrGenre[genre.Id] = paginatedMovies.TotalResults;
                 }

@@ -4,12 +4,12 @@ using CodeTestWexo.Models;
 using RestSharp;
 
 namespace CodeTestWexo.Repository;
-public class MovieService(IRestClientService restClientService, ILogger<MovieService> logger) : IMovieService
+public class MovieRepository(IRestClientRepository restClientRepository, ILogger<MovieRepository> logger) : IMovieRepository
 {
     public async Task<Movie?> GetMovieDetailsAsync(int movieId)
     {
         //DI for using the RestClient, less of the same code. 
-        var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}");
+        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}");
         var request = new RestRequest();
         var response = await client.GetAsync(request);
         if (response.Content == null)
@@ -37,7 +37,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
     public async Task<MovieTrendingResponse?> GetTrendingMoviesAsync()
     {
         //Using the restclient with DI and getting the trending movies by fetching this API 
-        var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/movie/popular");
+        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/popular");
         var request = new RestRequest();
         var response = await client.GetAsync(request);
         
@@ -66,7 +66,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
 
     public async Task<List<Video>?> GetMovieVideosAsync(int movieId)
     {
-        var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/videos");
+        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/videos");
         var request = new RestRequest();
         var response = await client.GetAsync(request);
         if (response?.Content == null)

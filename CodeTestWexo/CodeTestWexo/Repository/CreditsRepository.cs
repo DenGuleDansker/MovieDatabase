@@ -5,12 +5,12 @@ using RestSharp;
 
 namespace CodeTestWexo.Repository;
 
-public class CreditsService(IRestClientService restClientService, ILogger<CreditsService> logger) : ICreditService
+public class CreditsRepository(IRestClientRepository restClientRepository, ILogger<CreditsRepository> logger) : ICreditRepository
 {
     public async Task<List<CastCredits>> GetActorsByMovieIdAsync(int movieId)
     {
         //Getting the actors related to a specific movieId
-        var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/credits");
+        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/credits");
         var request = new RestRequest();
 
         var response = await client.GetAsync(request);
@@ -38,7 +38,7 @@ public class CreditsService(IRestClientService restClientService, ILogger<Credit
     public async Task<List<CrewCredits>> GetCrewsByMovieIdAsync(int movieId)
     {
         //Getting the actors related to a specific movieId
-        var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/credits");
+        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/credits");
         var request = new RestRequest();
 
         var response = await client.GetAsync(request);

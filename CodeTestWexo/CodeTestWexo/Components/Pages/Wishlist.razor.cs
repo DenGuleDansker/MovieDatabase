@@ -14,7 +14,7 @@ public partial class Wishlist
         // Fetch the movie details for each movieId
         foreach (var movieId in movieIds)
         {
-            var movie = await MovieService.GetMovieDetailsAsync(movieId);
+            var movie = await MovieRepository.GetMovieDetailsAsync(movieId);
             if (movie != null)
             {
                 wishlist.Add(movie); // Add movie to the wishlist

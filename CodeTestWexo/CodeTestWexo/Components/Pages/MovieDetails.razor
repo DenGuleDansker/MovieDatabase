@@ -1,8 +1,8 @@
 ﻿@page "/movie/{movieId:int}"
 @using CodeTestWexo.Interfaces
 @using CodeTestWexo.Models
-@inject IMovieService movieService
-@inject ICreditService creditsService
+@inject IMovieRepository MovieRepository
+@inject ICreditRepository CreditsRepository
 @rendermode InteractiveServer
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 

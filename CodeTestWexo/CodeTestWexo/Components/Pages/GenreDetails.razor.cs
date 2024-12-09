@@ -19,7 +19,7 @@ public partial class GenreDetails
     private async Task LoadGenreDetailsAsync(int page)
     {
         // Fetch movies for the selected genre and page
-        paginatedMovies = await GenreService.GetPaginatedMoviesByGenreAsync(genreId, page);
+        paginatedMovies = await GenreRepository.GetPaginatedMoviesByGenreAsync(genreId, page);
     }
 
     private async Task ChangePage(int increment)
