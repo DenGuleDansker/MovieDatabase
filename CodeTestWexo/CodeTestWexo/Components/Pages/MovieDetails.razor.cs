@@ -11,8 +11,7 @@ public partial class MovieDetails
     private List<CastCredits> casts = new List<CastCredits>();
     private List<CrewCredits> crews = new List<CrewCredits>();
     private List<int> wishList = new List<int>(); 
-    private int displayedActorCount = 5; 
-    private int displayedCrewCount = 5;  
+    private int displayedActorCount = 9; 
 
     protected override async Task OnInitializedAsync()
     {
@@ -27,14 +26,13 @@ public partial class MovieDetails
 
         //Fetch movie crew
         crews = await creditsService.GetCrewsByMovieIdAsync(movieId);
-
-        // Filter the crew list to exclude anyone who is already in the cast list while someone comes two times
-        crews = crews.Where(crew => !casts.Any(cast => cast.Id == crew.Id)).ToList();
-
+        
         // Remove duplicates in crews based on their ID
-        crews = crews.GroupBy(crew => crew.Id) // Group by ID
-            .Select(group => group.First()) // Take the first occurrence
+        crews = crews
+            .Where(crew => crew.Job != null && crew.Job.Contains("Director", StringComparison.OrdinalIgnoreCase)) // Filter jobs containing "Director"
             .ToList();
+
+
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -73,11 +71,9 @@ public partial class MovieDetails
         // Increase the displayed count by 5 or display all remaining actors
         displayedActorCount = casts.Count;
     }
-
-    private void LoadMoreCrew()
+    private void FoldActors()
     {
-        // Increase the displayed count by 5 or display all remaining crew
-        displayedCrewCount = crews.Count;
+        displayedActorCount = 9;
     }
 
     private string GetButtonClass()

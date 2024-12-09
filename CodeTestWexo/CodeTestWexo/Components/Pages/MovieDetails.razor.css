@@ -65,16 +65,10 @@
 }
 
 .actor-item p {
-    font-size: 14px;
+    font-size: 10px;
 }
 
-.crew-container {
-    background-color: #f9f9f9; 
-    padding: 20px;            
-    border-radius: 5px;       
-    margin-bottom: 20px;      
-}
-.crew-row {
+.crews-row {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -104,7 +98,7 @@
 }
 
 .crew-item p {
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .crewandcast-btn {

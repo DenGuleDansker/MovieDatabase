@@ -10,13 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bddb5da7-f3ea-4559-94aa-19e99c19e7dd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/GenreDetails.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/GenreDetails.razor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieHomePage.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieHomePage.razor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeTestWexo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeTestWexo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieDetails.razor" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieDetails.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieDetails.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieDetails.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieDetails.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieDetails.razor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Models/CastCredits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Models/CastCredits.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Models/CrewCredits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Models/CrewCredits.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.staticwebassets.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.staticwebassets.endpoints.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.dll" afterDir="false" />
@@ -25,11 +28,15 @@
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/ref/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/ref/CodeTestWexo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/refint/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/refint/CodeTestWexo.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/GenreDetails.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/GenreDetails.razor.rz.scp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/MovieHomePage.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/MovieHomePage.razor.rz.scp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/TrendingMovie.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/TrendingMovie.razor.rz.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/MovieDetails.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/MovieDetails.razor.rz.scp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/bundle/CodeTestWexo.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/bundle/CodeTestWexo.styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/projectbundle/CodeTestWexo.bundle.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/projectbundle/CodeTestWexo.bundle.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets.build.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets.build.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets/msbuild.CodeTestWexo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets/msbuild.CodeTestWexo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets/msbuild.CodeTestWexo.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/staticwebassets/msbuild.CodeTestWexo.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +49,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DenGuleDansker&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DenGuleDansker/MovieDatabase.git&quot;,
+    &quot;accountId&quot;: &quot;95776da2-4c10-4fef-b68b-87726cb6ff38&quot;
+  }
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -63,7 +82,8 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.CodeTestWexo: https">
@@ -123,6 +143,9 @@
       <updated>1733729124144</updated>
       <workItem from="1733729126331" duration="5496000" />
       <workItem from="1733739156376" duration="13508000" />
+      <workItem from="1733759335409" duration="535000" />
+      <workItem from="1733761417982" duration="298000" />
+      <workItem from="1733761733287" duration="1990000" />
     </task>
     <servers />
   </component>

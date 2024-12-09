@@ -10,6 +10,6 @@ public class CrewCredits
     [JsonPropertyName("profile_path")]
     public string? ProfilePath { get; set; }
         
-    [JsonPropertyName("known_for_department")]
-    public string? KnownForDepartment { get; set; }
+    [JsonPropertyName("job")]
+    public string? Job { get; set; }
 }

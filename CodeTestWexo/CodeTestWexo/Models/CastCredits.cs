@@ -13,4 +13,7 @@ public class CastCredits
         
     [JsonPropertyName("known_for_department")]
     public string? KnownForDepartment { get; set; }
+    
+    [JsonPropertyName("character")]
+    public string? Character {get; set; }
 }

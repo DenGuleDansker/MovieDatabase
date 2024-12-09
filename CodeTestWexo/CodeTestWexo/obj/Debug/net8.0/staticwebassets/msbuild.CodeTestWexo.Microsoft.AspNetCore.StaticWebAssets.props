@@ -54,23 +54,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\bootstrap\bootstrap.min.css.map'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CodeTestWexo.596loyl96i.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CodeTestWexo.o4yd2mzs68.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>CodeTestWexo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CodeTestWexo</BasePath>
-      <RelativePath>CodeTestWexo.596loyl96i.bundle.scp.css</RelativePath>
+      <RelativePath>CodeTestWexo.o4yd2mzs68.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>596loyl96i</Fingerprint>
-      <Integrity>6YLal5er1fpp+bTyYuDhCWiVn3whF0Q7D/3UVcsHMxc=</Integrity>
+      <Fingerprint>o4yd2mzs68</Fingerprint>
+      <Integrity>+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CodeTestWexo.596loyl96i.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CodeTestWexo.o4yd2mzs68.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cookie.js'))">
       <SourceType>Package</SourceType>

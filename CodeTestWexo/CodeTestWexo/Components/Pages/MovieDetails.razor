@@ -71,9 +71,45 @@ else
             </div>
         }
     </div>
+    
+    <div class="crews-container">
+        <h4>Directors:</h4>
+        @if (crews.Any())
+        {
+            <div class="crews-row">
+                @foreach (var crew in crews)
+                {
+                    <div class="crew-item">
+                        @if (!string.IsNullOrEmpty(crew.ProfilePath))
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w200{crew.ProfilePath}")" alt="@crew.Name"/>
+                        }
+                        else
+                        {
+                            <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                        }
+                        <p style="font-weight: bold">@crew.Name</p>
+                        <p>@crew.Job</p>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>No crews available for this movie.</p>
+        }
+    </div>
 
     <div class="actors-container">
         <h4>Actors:</h4>
+        @if (displayedActorCount < casts.Count)
+        {
+            <button @onclick="LoadMoreActors" class="crewandcast-btn">Load More Actors</button>
+        }
+        else
+        {
+            <button @onclick="FoldActors" class="crewandcast-btn">Fold crew</button>
+        }
         @if (casts.Any())
         {
             <div class="actors-row">
@@ -88,51 +124,16 @@ else
                         {
                             <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
                         }
-                        <p>@actor.Name</p>
-                        <p>Role : @actor.KnownForDepartment</p>
+                        <p style="font-weight: bold">@actor.Name</p>
+                        <p>@actor.Character</p>
+                        <p>@actor.KnownForDepartment</p>
                     </div>
                 }
             </div>
-            @if (displayedActorCount < casts.Count)
-            {
-                <button @onclick="LoadMoreActors" class="crewandcast-btn">Load More Actors</button>
-            }
         }
         else
         {
             <p>No actors available for this movie.</p>
-        }
-    </div>
-
-    <div class="crew-container">
-        <h4>Crews:</h4>
-        @if (crews.Any())
-        {
-            <div class="crew-row">
-                @foreach (var crew in crews.Take(displayedCrewCount))
-                {
-                    <div class="crew-item">
-                        @if (!string.IsNullOrEmpty(crew.ProfilePath))
-                        {
-                            <img src="@($"https://image.tmdb.org/t/p/w200{crew.ProfilePath}")" alt="@crew.Name"/>
-                        }
-                        else
-                        {
-                            <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
-                        }
-                        <p>@crew.Name</p>
-                        <p>Role : @crew.KnownForDepartment</p>
-                    </div>
-                }
-            </div>
-            @if (displayedCrewCount < crews.Count)
-            {
-                <button @onclick="LoadMoreCrew" class="crewandcast-btn">Load More Crew</button>
-            }
-        }
-        else
-        {
-            <p>No crews available for this movie.</p>
         }
     </div>
 }
