@@ -24,9 +24,9 @@ public partial class TrendingMovie
         StateHasChanged();
     }
 
-    //Redirecting to detailspage
     private void NavigateToMovieDetails(int movieId)
     {
+        //Redirecting to detailspage
         NavigationManager.NavigateTo($"/movie/{movieId}");
     }
 }

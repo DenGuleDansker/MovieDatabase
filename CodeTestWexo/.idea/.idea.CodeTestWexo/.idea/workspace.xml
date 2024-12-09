@@ -10,18 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bddb5da7-f3ea-4559-94aa-19e99c19e7dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/GenreDetails.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/GenreDetails.razor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieHomePage.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/MovieHomePage.razor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/Components/Pages/TrendingMovie.razor.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/bin/Debug/net8.0/CodeTestWexo.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/CodeTestWexo.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/ref/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/ref/CodeTestWexo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/refint/CodeTestWexo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/refint/CodeTestWexo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/GenreDetails.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/GenreDetails.razor.rz.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/MovieHomePage.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/MovieHomePage.razor.rz.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/TrendingMovie.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/Components/Pages/TrendingMovie.razor.rz.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/bundle/CodeTestWexo.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/bundle/CodeTestWexo.styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/projectbundle/CodeTestWexo.bundle.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CodeTestWexo/obj/Debug/net8.0/scopedcss/projectbundle/CodeTestWexo.bundle.scp.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733729124144</updated>
       <workItem from="1733729126331" duration="5496000" />
-      <workItem from="1733739156376" duration="12846000" />
+      <workItem from="1733739156376" duration="13508000" />
     </task>
     <servers />
   </component>

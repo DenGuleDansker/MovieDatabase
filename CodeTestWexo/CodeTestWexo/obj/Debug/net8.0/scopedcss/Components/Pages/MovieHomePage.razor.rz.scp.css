@@ -13,8 +13,8 @@
 
 .movies-grid[b-q0uvjowmxc] {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjusts column size */
-    gap: 15px; /* Space between items */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 15px; 
     padding: 50px;
 }
 
@@ -28,12 +28,12 @@
 }
 
 .movie-item:hover[b-q0uvjowmxc] {
-    transform: scale(1.05); /* Slightly increase size on hover */
+    transform: scale(1.05); 
 }
 
 .movie-item img[b-q0uvjowmxc] {
-    width: 100%; /* Make the image fill the container */
-    max-width: 250px; /* Ensure the image doesn't get too large */
+    width: 100%; 
+    max-width: 250px; 
     height: auto;
     border-radius: 4px;
     margin-bottom: 15px;
