@@ -1,4 +1,4 @@
-﻿using CodeTestWexo.Components.Models;
+﻿using CodeTestWexo.Models;
 using Microsoft.JSInterop;
 
 namespace CodeTestWexo.Components.Pages

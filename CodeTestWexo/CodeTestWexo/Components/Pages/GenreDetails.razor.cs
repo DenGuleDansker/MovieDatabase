@@ -1,4 +1,4 @@
-﻿using CodeTestWexo.Components.Models;
+﻿using CodeTestWexo.Models;
 using Microsoft.AspNetCore.Components;
 
 namespace CodeTestWexo.Components.Pages;

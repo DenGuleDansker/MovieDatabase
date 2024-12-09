@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
-using CodeTestWexo.Components.Models;
 using CodeTestWexo.Interfaces;
+using CodeTestWexo.Models;
 using RestSharp;
 
 namespace CodeTestWexo.Repository;

@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
-using CodeTestWexo.Components.Models;
 using CodeTestWexo.Interfaces;
+using CodeTestWexo.Models;
 using RestSharp;
 
-namespace CodeTestWexo.Services;
+namespace CodeTestWexo.Repository;
 
 public class GenreService(IRestClientService restClientService, ILogger<GenreService> logger) : IGenreService
 {

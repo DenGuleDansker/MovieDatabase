@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace CodeTestWexo.Components.Models;
+namespace CodeTestWexo.Models;
 
 public class CrewCredits
 {

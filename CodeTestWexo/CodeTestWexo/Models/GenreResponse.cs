@@ -1,4 +1,4 @@
-﻿namespace CodeTestWexo.Components.Models;
+﻿namespace CodeTestWexo.Models;
 
 public class GenreResponse
 {

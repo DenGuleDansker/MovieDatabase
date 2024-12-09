@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
-using CodeTestWexo.Components.Models;
 using CodeTestWexo.Interfaces;
+using CodeTestWexo.Models;
 using RestSharp;
 
-namespace CodeTestWexo.Services;
+namespace CodeTestWexo.Repository;
 public class MovieService(IRestClientService restClientService, ILogger<MovieService> logger) : IMovieService
 {
     public async Task<Movie?> GetMovieDetailsAsync(int movieId)
