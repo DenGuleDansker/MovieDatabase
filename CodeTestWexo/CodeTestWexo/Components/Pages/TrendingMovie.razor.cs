@@ -9,7 +9,6 @@ public partial class TrendingMovie
 
     protected override async Task OnInitializedAsync()
     {
-        // Simply load movies when the page is initialized
         await LoadMovies();
     }
 

@@ -11,7 +11,7 @@ public class Movie
     public double Popularity { get; set; }
         
     [JsonPropertyName("genres")]
-    public List<Genre> Genres { get; set; }  
+    public List<Genre>? Genres { get; set; }  
 
     [JsonPropertyName("backdrop_path")]
     public string? BackdropPath { get; set; }

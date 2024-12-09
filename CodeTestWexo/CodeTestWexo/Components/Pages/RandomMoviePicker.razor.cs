@@ -39,16 +39,17 @@ public partial class RandomMoviePicker
             await GenreService.GetPaginatedMoviesByGenreAsync(selectedGenreId, GenerateRandomNumber());
 
         filteredMovies = movieDiscoverResponse.Movies
-            .Where(movie => movie.VoteAverage >= minRating) // Filtering by rating
+            .Where(movie => movie.VoteAverage >= minRating) 
             .ToList();
 
         if (filteredMovies.Any())
         {
+            //Finds a random movie in by the count
             randomMovie = filteredMovies[new Random().Next(filteredMovies.Count)];
         }
         else
         {
-            randomMovie = null; // Set to null if no movies match
+            randomMovie = null; 
             randomMovieNotFound = true; // Set the flag to show the "try again" message
         }
 
@@ -57,6 +58,6 @@ public partial class RandomMoviePicker
 
     private void NavigateToMovieDetails(int movieId)
     {
-        NavigationManager.NavigateTo($"/movie/{movieId}");
+        navigationManager.NavigateTo($"/movie/{movieId}");
     }
 }

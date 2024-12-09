@@ -1,14 +1,14 @@
 ﻿@page "/movie/{movieId:int}"
 @using CodeTestWexo.Components.Models
 @using CodeTestWexo.Interfaces
+@inject IMovieService movieService
+@inject ICreditService creditsService
 @rendermode InteractiveServer
-@inject IMovieService MovieService
-@inject ICreditService CreditsService
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 
 @if (movie == null)
 {
-    <p>Loading movie details...</p>
+    <p>No movies found...</p>
 }
 else
 {
@@ -39,13 +39,13 @@ else
                 <p>
                     <strong>Overall votes:</strong> @movie?.VoteCount
                 </p>
-                
+
                 <p>
-                    <strong>Genre(s):</strong> @string.Join(", ", movie!.Genres.Select(g => g.Name))
+                    <strong>Genre(s):</strong> @string.Join(", ", movie.Genres.Select(g => g.Name))
                 </p>
 
                 <button @onclick="ToggleWishlist" class="wishlist-btn @GetButtonClass()">
-                    @if (wishlist.Contains(movie.Id))
+                    @if (wishList.Contains(movie.Id))
                     {
                         <span>Remove from Wishlist</span>
                     }
@@ -58,29 +58,26 @@ else
         </div>
     </div>
     <div class="video-container">
-        @if (videos.FirstOrDefault(v => v.Type?.ToLower() == "trailer") is Video trailer)
+
+        @if (videos == null)
+        {
+            <p class="no-trailer-message">No trailers available</p>
+        }
+        else if (videos.FirstOrDefault(v => v.Type?.ToLower() == "trailer") is Video trailer)
         {
             <h4>Watch Trailer</h4>
             <div class="video-item">
                 <iframe src="https://www.youtube.com/embed/@trailer.Key" frameborder="0" allowfullscreen></iframe>
             </div>
         }
-        else
-        {
-            <p>No trailers available</p>
-        }
     </div>
 
-        <div class="actors-container">
+    <div class="actors-container">
         <h4>Actors:</h4>
-        @if (actors == null || !actors.Any())
-        {
-            <p>No actors available for this movie.</p>
-        }
-        else
+        @if (casts.Any())
         {
             <div class="actors-row">
-                @foreach (var actor in actors)
+                @foreach (var actor in casts.Take(displayedActorCount))
                 {
                     <div class="actor-item">
                         @if (!string.IsNullOrEmpty(actor.ProfilePath))
@@ -96,6 +93,46 @@ else
                     </div>
                 }
             </div>
+            @if (displayedActorCount < casts.Count)
+            {
+                <button @onclick="LoadMoreActors" class="crewandcast-btn">Load More Actors</button>
+            }
+        }
+        else
+        {
+            <p>No actors available for this movie.</p>
+        }
+    </div>
+
+    <div class="crew-container">
+        <h4>Crews:</h4>
+        @if (crews.Any())
+        {
+            <div class="crew-row">
+                @foreach (var crew in crews.Take(displayedCrewCount))
+                {
+                    <div class="crew-item">
+                        @if (!string.IsNullOrEmpty(crew.ProfilePath))
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w200{crew.ProfilePath}")" alt="@crew.Name"/>
+                        }
+                        else
+                        {
+                            <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                        }
+                        <p>@crew.Name</p>
+                        <p>Role : @crew.KnownForDepartment</p>
+                    </div>
+                }
+            </div>
+            @if (displayedCrewCount < crews.Count)
+            {
+                <button @onclick="LoadMoreCrew" class="crewandcast-btn">Load More Crew</button>
+            }
+        }
+        else
+        {
+            <p>No crews available for this movie.</p>
         }
     </div>
 }

@@ -7,7 +7,7 @@
 
 <h3>Trending Movies</h3>
 
-@if (isLoading)
+@if (isLoading || movies?.Results == null)
 {
     <p>Loading...</p>
 }

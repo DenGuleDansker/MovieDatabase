@@ -9,11 +9,8 @@
 <h3>Your Wishlist</h3>
 
 <div class="wishlist-container">
-    @if (wishlist == null || !wishlist.Any())
-    {
-        <p>Add something to your wishlist...</p>
-    }
-    else 
+    
+    @if(wishlist.Any()) 
     {
         @foreach (var movie in wishlist)
         {
@@ -27,5 +24,9 @@
                 </div>
             </div>
         }
+    }
+    else
+    {
+    <p>Add something to your wishlist...</p>
     }
 </div>

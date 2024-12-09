@@ -1,6 +1,7 @@
 using Blazored.LocalStorage;
 using CodeTestWexo.Components;
 using CodeTestWexo.Interfaces;
+using CodeTestWexo.Repository;
 using CodeTestWexo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,5 +34,6 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+
 
 app.Run();

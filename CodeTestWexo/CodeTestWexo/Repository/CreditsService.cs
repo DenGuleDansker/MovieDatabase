@@ -3,7 +3,7 @@ using CodeTestWexo.Components.Models;
 using CodeTestWexo.Interfaces;
 using RestSharp;
 
-namespace CodeTestWexo.Services;
+namespace CodeTestWexo.Repository;
 
 public class CreditsService(IRestClientService restClientService, ILogger<CreditsService> logger) : ICreditService
 {

@@ -81,7 +81,7 @@
     .movie-item {
         justify-content: center; 
         max-width: 90%;        
-        margin: -10px !important;      
+        margin: -10px;      
     }
 
     .movie-poster {

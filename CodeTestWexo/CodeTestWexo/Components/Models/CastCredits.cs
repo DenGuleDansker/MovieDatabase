@@ -5,7 +5,9 @@ namespace CodeTestWexo.Components.Models;
 
 public class CastCredits
 {
+    public int Id { get; set; }
     public string? Name { get; set; }
+    
     [JsonPropertyName("profile_path")]
     public string? ProfilePath { get; set; }
         

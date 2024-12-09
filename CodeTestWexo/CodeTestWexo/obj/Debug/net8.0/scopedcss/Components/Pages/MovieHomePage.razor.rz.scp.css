@@ -1,4 +1,4 @@
-.genre-section[b-7vd1q7ipzz] {
+.genre-section[b-q0uvjowmxc] {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ccc;
@@ -6,19 +6,19 @@
     background-color: #f9f9f9;
 }
 
-.genre-section h4[b-7vd1q7ipzz] {
+.genre-section h4[b-q0uvjowmxc] {
     margin: 0 0 10px;
     font-size: 1.5em;
 }
 
-.movies-grid[b-7vd1q7ipzz] {
+.movies-grid[b-q0uvjowmxc] {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjusts column size */
     gap: 15px; /* Space between items */
     padding: 50px;
 }
 
-.movie-item[b-7vd1q7ipzz] {
+.movie-item[b-q0uvjowmxc] {
     text-align: center;
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -27,11 +27,11 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.movie-item:hover[b-7vd1q7ipzz] {
+.movie-item:hover[b-q0uvjowmxc] {
     transform: scale(1.05); /* Slightly increase size on hover */
 }
 
-.movie-item img[b-7vd1q7ipzz] {
+.movie-item img[b-q0uvjowmxc] {
     width: 100%; /* Make the image fill the container */
     max-width: 250px; /* Ensure the image doesn't get too large */
     height: auto;
@@ -39,7 +39,7 @@
     margin-bottom: 15px;
 }
 
-.movie-item button[b-7vd1q7ipzz] {
+.movie-item button[b-q0uvjowmxc] {
     background-color: #007bff;
     color: white;
     border: none;
@@ -49,7 +49,7 @@
     transition: background-color 0.3s ease;
 }
 
-.genre-section button[b-7vd1q7ipzz]{
+.genre-section button[b-q0uvjowmxc]{
     background-color: #007bff;
     color: white;
     border: none;
@@ -59,11 +59,11 @@
     transition: background-color 0.3s ease;
 }
 
-.movie-item button:hover[b-7vd1q7ipzz] {
+.movie-item button:hover[b-q0uvjowmxc] {
     background-color: #0056b3;
 }
 
-.load-more-button[b-7vd1q7ipzz] {
+.load-more-button[b-q0uvjowmxc] {
     margin-top: 10px;
     padding: 5px 10px;
     background-color: #007bff;
@@ -73,23 +73,23 @@
     cursor: pointer;
 }
 
-.load-more-button:hover[b-7vd1q7ipzz] {
+.load-more-button:hover[b-q0uvjowmxc] {
     background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
-    .movie-item[b-7vd1q7ipzz] {
+    .movie-item[b-q0uvjowmxc] {
         justify-content: center; 
         max-width: 90%;        
-        margin: -10px !important;      
+        margin: -10px;      
     }
 
-    .movie-poster[b-7vd1q7ipzz] {
+    .movie-poster[b-q0uvjowmxc] {
         max-width: 100%;       
         margin-bottom: 10px;  
     }
 
-    .movie-item button[b-7vd1q7ipzz] {
+    .movie-item button[b-q0uvjowmxc] {
         width: 100%;         
     }
     

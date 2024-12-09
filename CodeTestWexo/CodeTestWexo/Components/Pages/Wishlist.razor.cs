@@ -10,7 +10,7 @@ public partial class Wishlist
     {
         // Retrieve the movie IDs from localStorage
         var movieIds = await localStorage.GetItemAsync<List<int>>("wishlist") ?? new List<int>();
-
+        
         // Fetch the movie details for each movieId
         foreach (var movieId in movieIds)
         {
@@ -20,6 +20,8 @@ public partial class Wishlist
                 wishlist.Add(movie); // Add movie to the wishlist
             }
         }
+        
+        StateHasChanged();
     }
 
     private async Task RemoveFromWishlist(int movieId)
