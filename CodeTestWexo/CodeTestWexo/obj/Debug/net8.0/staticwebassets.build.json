@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x3mjAeKOsf2m9V+Ya74+P9snIsSJ1jOzP4WtuBnkcHY=",
+  "Hash": "qE+fIJ9Wbb5dbhRPOo0E7oio7puDYnZq29CCqBs9b90=",
   "Source": "CodeTestWexo",
   "BasePath": "_content/CodeTestWexo",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "o4yd2mzs68",
-      "Integrity": "+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo=",
+      "Fingerprint": "h1ccmfo3a2",
+      "Integrity": "9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CodeTestWexo.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "o4yd2mzs68",
-      "Integrity": "+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo=",
+      "Fingerprint": "h1ccmfo3a2",
+      "Integrity": "9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CodeTestWexo.bundle.scp.css"
@@ -422,7 +422,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19634"
+          "Value": "23786"
         },
         {
           "Name": "Content-Type",
@@ -430,11 +430,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo=\""
+          "Value": "\"9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 17:02:05 GMT"
+          "Value": "Mon, 09 Dec 2024 18:19:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -444,12 +444,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo="
+          "Value": "sha256-9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs="
         }
       ]
     },
     {
-      "Route": "CodeTestWexo.o4yd2mzs68.bundle.scp.css",
+      "Route": "CodeTestWexo.h1ccmfo3a2.bundle.scp.css",
       "AssetFile": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CodeTestWexo.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -459,7 +459,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19634"
+          "Value": "23786"
         },
         {
           "Name": "Content-Type",
@@ -467,11 +467,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo=\""
+          "Value": "\"9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 17:02:05 GMT"
+          "Value": "Mon, 09 Dec 2024 18:19:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -481,7 +481,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4yd2mzs68"
+          "Value": "h1ccmfo3a2"
         },
         {
           "Name": "label",
@@ -489,12 +489,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo="
+          "Value": "sha256-9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs="
         }
       ]
     },
     {
-      "Route": "CodeTestWexo.o4yd2mzs68.styles.css",
+      "Route": "CodeTestWexo.h1ccmfo3a2.styles.css",
       "AssetFile": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CodeTestWexo.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -504,7 +504,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19634"
+          "Value": "23786"
         },
         {
           "Name": "Content-Type",
@@ -512,11 +512,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo=\""
+          "Value": "\"9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 17:02:05 GMT"
+          "Value": "Mon, 09 Dec 2024 18:19:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -526,7 +526,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4yd2mzs68"
+          "Value": "h1ccmfo3a2"
         },
         {
           "Name": "label",
@@ -534,7 +534,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo="
+          "Value": "sha256-9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs="
         }
       ]
     },
@@ -549,7 +549,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19634"
+          "Value": "23786"
         },
         {
           "Name": "Content-Type",
@@ -557,11 +557,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo=\""
+          "Value": "\"9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 17:02:05 GMT"
+          "Value": "Mon, 09 Dec 2024 18:19:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -571,7 +571,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+Ic0k4sGt9b7LwiZCeyOlBwMcfgDrKUcMLsUZAVsATo="
+          "Value": "sha256-9XlCZFYpXZ5A+rY1KfL+7kdW9C0Zftrs8nvpgbQSROs="
         }
       ]
     },

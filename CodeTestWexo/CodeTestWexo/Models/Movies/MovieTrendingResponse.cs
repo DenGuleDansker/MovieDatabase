@@ -1,4 +1,4 @@
-﻿namespace CodeTestWexo.Models;
+﻿namespace CodeTestWexo.Models.Movies;
 
 public class MovieTrendingResponse
 {

@@ -1,4 +1,4 @@
-.genre-section[b-q0uvjowmxc] {
+.genre-section {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ccc;
@@ -6,19 +6,19 @@
     background-color: #f9f9f9;
 }
 
-.genre-section h4[b-q0uvjowmxc] {
+.genre-section h4 {
     margin: 0 0 10px;
     font-size: 1.5em;
 }
 
-.movies-grid[b-q0uvjowmxc] {
+.movies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 15px; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
     padding: 50px;
 }
 
-.movie-item[b-q0uvjowmxc] {
+.movie-item {
     text-align: center;
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -27,19 +27,19 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.movie-item:hover[b-q0uvjowmxc] {
-    transform: scale(1.05); 
+.movie-item:hover {
+    transform: scale(1.05);
 }
 
-.movie-item img[b-q0uvjowmxc] {
-    width: 100%; 
-    max-width: 250px; 
+.movie-item img {
+    width: 100%;
+    max-width: 250px;
     height: auto;
     border-radius: 4px;
     margin-bottom: 15px;
 }
 
-.movie-item button[b-q0uvjowmxc] {
+.movie-item button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -49,7 +49,7 @@
     transition: background-color 0.3s ease;
 }
 
-.genre-section button[b-q0uvjowmxc]{
+.genre-section button{
     background-color: #007bff;
     color: white;
     border: none;
@@ -59,11 +59,11 @@
     transition: background-color 0.3s ease;
 }
 
-.movie-item button:hover[b-q0uvjowmxc] {
+.movie-item button:hover {
     background-color: #0056b3;
 }
 
-.load-more-button[b-q0uvjowmxc] {
+.load-more-button {
     margin-top: 10px;
     padding: 5px 10px;
     background-color: #007bff;
@@ -73,26 +73,26 @@
     cursor: pointer;
 }
 
-.load-more-button:hover[b-q0uvjowmxc] {
+.load-more-button:hover {
     background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
-    .movie-item[b-q0uvjowmxc] {
-        justify-content: center; 
-        max-width: 90%;        
-        margin: -10px;      
+    .movie-item {
+        justify-content: center;
+        max-width: 90%;
+        margin: -10px;
     }
 
-    .movie-poster[b-q0uvjowmxc] {
-        max-width: 100%;       
-        margin-bottom: 10px;  
+    .movie-poster {
+        max-width: 100%;
+        margin-bottom: 10px;
     }
 
-    .movie-item button[b-q0uvjowmxc] {
-        width: 100%;         
+    .movie-item button {
+        width: 100%;
     }
-    
+
 }
 
 

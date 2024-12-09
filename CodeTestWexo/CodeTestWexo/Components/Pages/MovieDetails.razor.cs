@@ -1,4 +1,5 @@
 ﻿using CodeTestWexo.Models;
+using CodeTestWexo.Models.Movies;
 using Microsoft.AspNetCore.Components;
 
 namespace CodeTestWexo.Components.Pages;
@@ -7,7 +8,7 @@ public partial class MovieDetails
 {
     [Parameter] public int movieId { get; set; }
     private Movie? movie;
-    private List<Video>? videos = new();
+    private List<MovieVideo>? videos = new();
     private List<CastCredits> casts = new List<CastCredits>();
     private List<CrewCredits> crews = new List<CrewCredits>();
     private List<int> wishList = new List<int>(); 

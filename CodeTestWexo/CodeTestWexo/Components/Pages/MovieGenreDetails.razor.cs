@@ -1,9 +1,10 @@
 ﻿using CodeTestWexo.Models;
+using CodeTestWexo.Models.Movies;
 using Microsoft.AspNetCore.Components;
 
 namespace CodeTestWexo.Components.Pages;
 
-public partial class GenreDetails
+public partial class MovieGenreDetails
 {
     [Parameter] public int genreId { get; set; }
     private string genreName;

@@ -1,6 +1,7 @@
 ﻿@page "/movie/{movieId:int}"
 @using CodeTestWexo.Interfaces
 @using CodeTestWexo.Models
+@using CodeTestWexo.Models.Movies
 @inject IMovieRepository MovieRepository
 @inject ICreditRepository CreditsRepository
 @rendermode InteractiveServer
@@ -63,7 +64,7 @@ else
         {
             <p class="no-trailer-message">No trailers available</p>
         }
-        else if (videos.FirstOrDefault(v => v.Type?.ToLower() == "trailer") is Video trailer)
+        else if (videos.FirstOrDefault(v => v.Type?.ToLower() == "trailer") is MovieVideo trailer)
         {
             <h4>Watch Trailer</h4>
             <div class="video-item">

@@ -1,9 +1,10 @@
 ﻿using CodeTestWexo.Models;
+using CodeTestWexo.Models.Movies;
 using Microsoft.JSInterop;
 
 namespace CodeTestWexo.Components.Pages
 {
-    public partial class MovieHomePage
+    public partial class MovieGenrePage
     {
         private List<Genre> genres = new();
         private Dictionary<int, List<Movie>> genreMovies = new();
@@ -15,7 +16,7 @@ namespace CodeTestWexo.Components.Pages
             try
             {
                 //Gets all genre
-                genres = await GenreRepository.GetGenresAsync();
+                genres = await GenreRepository.GetMovieGenresAsync();
 
                 //Gets all movies that belongs to a specific genre in the first page. 
                 foreach (var genre in genres)
@@ -35,7 +36,7 @@ namespace CodeTestWexo.Components.Pages
 
         private void NavigateToGenre(int genreId)
         {
-            navigationManager.NavigateTo($"/genre/{genreId}");
+            navigationManager.NavigateTo($"/moviegenre/{genreId}");
         }
 
         private void NavigateToMovieDetails(int movieId)

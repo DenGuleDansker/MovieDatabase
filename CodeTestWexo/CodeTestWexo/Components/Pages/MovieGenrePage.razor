@@ -1,11 +1,10 @@
-﻿@page "/"
-@using AltairCA.Blazor.WebAssembly.Cookie
+﻿@page "/moviegenrepage"
 @using CodeTestWexo.Interfaces
 @rendermode InteractiveServer
 @inject NavigationManager navigationManager
 @inject IGenreRepository GenreRepository
 
-<h3>Genres</h3>
+<h3>Movie genres</h3>
 
 @if (isLoading)
 {

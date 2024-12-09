@@ -99,7 +99,6 @@ C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\bin\Debug\net8.0\RestSharp.dll
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
-C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\GenreDetails.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieDetails.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\Wishlist.razor.rz.scp.css
 C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\bundle\CodeTestWexo.styles.css
@@ -162,4 +161,7 @@ C:\Users\CLM\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\Co
 C:\Users\CLM\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\CodeTestWexo.genruntimeconfig.cache
 C:\Users\CLM\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\ref\CodeTestWexo.dll
 C:\Users\CLM\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieHomePage.razor.rz.scp.css
-C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieHomePage.razor.rz.scp.css
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieGenrePage.razor.rz.scp.css
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\MovieGenreDetails.razor.rz.scp.css
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\SerieGenrePage.razor.rz.scp.css
+C:\Users\chili\Desktop\MovieDatabase\CodeTestWexo\CodeTestWexo\obj\Debug\net8.0\scopedcss\Components\Pages\SerieGenreDetails.razor.rz.scp.css

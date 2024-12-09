@@ -11,6 +11,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<ISerieRepository, SerieRepository>();
 builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 builder.Services.AddScoped<ICreditRepository, CreditsRepository>();
 builder.Services.AddScoped<IRestClientRepository, RestClientRepository>();

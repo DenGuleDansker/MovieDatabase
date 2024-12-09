@@ -1,8 +1,8 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
-namespace CodeTestWexo.Models;
+namespace CodeTestWexo.Models.Series;
 
-public class Movie
+public class Serie
 {
     public int Id { get; set; }
 
@@ -31,5 +31,3 @@ public class Movie
 
     public int VoteCount { get; set; }
 }
-
-

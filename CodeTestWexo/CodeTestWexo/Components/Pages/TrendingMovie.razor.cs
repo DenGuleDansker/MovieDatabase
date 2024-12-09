@@ -1,4 +1,5 @@
 ﻿using CodeTestWexo.Models;
+using CodeTestWexo.Models.Movies;
 
 namespace CodeTestWexo.Components.Pages;
 

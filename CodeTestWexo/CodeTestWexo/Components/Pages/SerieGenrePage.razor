@@ -1,0 +1,85 @@
+@page "/seriegenrepage"
+@using CodeTestWexo.Interfaces
+@using CodeTestWexo.Models
+@using CodeTestWexo.Models.Series
+@rendermode InteractiveServer
+@inject NavigationManager navigationManager
+@inject IGenreRepository GenreRepository
+
+
+
+<h3>Serie genres</h3>
+
+@if (isLoading)
+{
+    <p>Loading genres and series...</p>
+}
+else
+{
+    @foreach (var genre in genres)
+    {
+        <div class="genre-section">
+            <h4>
+                @genre.Name
+            </h4>
+            <button @onclick="() => NavigateToGenre(genre.Id)">View all movies</button>
+            <p>Total Movies: @serieCountsPrGenre[genre.Id]</p>
+
+            <div class="movies-grid">
+                @foreach (var serie in genreMovies[genre.Id].Take(5))
+                {
+                    <div class="movie-item" @onclick="() => NavigateToMovieDetails(serie.Id)">
+                        <p>@serie.Title</p>
+
+                        <!-- Display Movie Poster Image -->
+                        @if (!string.IsNullOrEmpty(serie.PosterPath))
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w500{serie.PosterPath}")" style="max-width: 200px; margin-bottom: 10px;"/>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+
+@code {
+    private List<Genre> genres = new();
+    private Dictionary<int, List<Serie>> genreMovies = new();
+    private Dictionary<int, int> serieCountsPrGenre = new();
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            //Gets all genre
+            genres = await GenreRepository.GetSerieGenresAsync();
+
+            //Gets all movies that belongs to a specific genre in the first page. 
+            foreach (var genre in genres)
+            {
+                var paginatedMovies = await GenreRepository.GetPaginatedSeriesByGenreAsync(genre.Id, 1);
+                genreMovies[genre.Id] = paginatedMovies.Series;
+                serieCountsPrGenre[genre.Id] = paginatedMovies.TotalResults;
+            }
+        }
+        catch (Exception)
+        {
+            throw new Exception();
+        }
+
+        isLoading = false;
+    }
+
+    private void NavigateToGenre(int genreId)
+    {
+        navigationManager.NavigateTo($"/seriegenre/{genreId}");
+    }
+
+    private void NavigateToMovieDetails(int serieId)
+    {
+        navigationManager.NavigateTo($"/serie/{serieId}");
+    }
+
+}

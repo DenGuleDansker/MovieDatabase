@@ -1,0 +1,66 @@
+@page "/seriegenre/{genreId:int}"
+@using CodeTestWexo.Interfaces
+@using CodeTestWexo.Models.Series
+@rendermode InteractiveServer
+@inject IGenreRepository GenreRepository
+@inject NavigationManager navigationManager
+
+<h3>@genreName</h3>
+<p>Total Series: @paginatedSeries.TotalResults</p>
+
+@if (paginatedSeries?.Series == null)
+{
+<p>Loading movies...</p>
+}
+else
+{
+<div class="series-grid">
+    @foreach (var serie in paginatedSeries.Series.Take(14))
+    {
+    <div class="series-item" @onclick="() => NavigateToMovieDetails(serie.Id)">
+        <img src="@($"https://image.tmdb.org/t/p/w500{serie.PosterPath}")" alt="@serie.Title" />
+        <p>@serie.Title</p>
+    </div>
+    }
+</div>
+}
+
+<!-- Pagination Controls -->
+<div class="pagination">
+    <button @onclick="() => ChangePage(-1)" disabled="@IsPreviousDisabled()">Previous</button>
+    <span>Page @paginatedSeries?.CurrentPage of @paginatedSeries?.TotalPages</span>
+    <button @onclick="() => ChangePage(1)" disabled="@IsNextDisabled()">Next</button>
+</div>
+
+@code
+{
+    [Parameter] public int genreId { get; set; }
+    private string genreName;
+    private PaginatedSeries paginatedSeries = new PaginatedSeries();
+    private bool IsPreviousDisabled() => paginatedSeries.CurrentPage <= 1;
+    private bool IsNextDisabled() => paginatedSeries.CurrentPage >= paginatedSeries.TotalPages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadGenreDetailsAsync(1); // Load first page
+    }
+
+    private async Task LoadGenreDetailsAsync(int page)
+    {
+        // Fetch movies for the selected genre and page
+        paginatedSeries = await GenreRepository.GetPaginatedSeriesByGenreAsync(genreId, page);
+    }
+
+    private async Task ChangePage(int increment)
+    {
+        int newPage = paginatedSeries.CurrentPage + increment;
+        if (newPage < 1 || newPage > paginatedSeries.TotalPages) return;
+
+        await LoadGenreDetailsAsync(newPage);
+    }
+
+    private void NavigateToMovieDetails(int movieId)
+    {
+        navigationManager.NavigateTo($"/movie/{movieId}");
+    }
+}

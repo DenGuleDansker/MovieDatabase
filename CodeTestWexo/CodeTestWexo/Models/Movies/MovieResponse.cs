@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
+using CodeTestWexo.Models.Series;
 
-namespace CodeTestWexo.Models;
+namespace CodeTestWexo.Models.Movies;
 
 public class MovieResponse
 {

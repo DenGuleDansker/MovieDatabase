@@ -1,15 +1,15 @@
-.genre-section[b-sdl9w3h068] {
+.genre-section {
     margin-bottom: 20px;
 }
 
-.movies-grid[b-sdl9w3h068] {
+.series-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 12px;
     padding: 10px;
 }
 
-.movie-item[b-sdl9w3h068] {
+.series-item {
     text-align: center;
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -18,44 +18,29 @@
     transition: transform 0.3s ease;
 }
 
-.movie-item:hover[b-sdl9w3h068] {
-    transform: scale(1.05); 
+.series-item:hover {
+    transform: scale(1.05);
 }
 
-.movie-item img[b-sdl9w3h068] {
+.series-item img {
     width: 100%;
     height: 250px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-.movie-item p[b-sdl9w3h068] {
+.series-item p {
     margin: 8px 0;
     font-size: 16px;
     font-weight: bold;
 }
 
-.movie-item button.view-details-btn[b-sdl9w3h068] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 12px;
-}
-
-.movie-item button.view-details-btn:hover[b-sdl9w3h068] {
-    background-color: #0056b3; 
-}
-
-.pagination[b-sdl9w3h068] {
+.pagination {
     display: flex;
     gap: 8px;
     margin-top: 20px;
 }
 
-.page-btn[b-sdl9w3h068] {
+.page-btn {
     padding: 8px 16px;
     border: none;
     background-color: #007bff;
@@ -64,23 +49,23 @@
     border-radius: 4px;
 }
 
-.page-btn:hover[b-sdl9w3h068] {
+.page-btn:hover {
     background-color: #0056b3;
 }
 
-.pagination button[b-sdl9w3h068] {
+.pagination button {
     padding: 8px 16px;
     font-size: 14px;
     font-weight: bold;
     color: white;
-    background-color: #007bff; 
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.pagination[b-sdl9w3h068] {
+.pagination {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +75,7 @@
 }
 
 @media (max-width: 768px) {
-    .pagination[b-sdl9w3h068] {
+    .pagination {
         position: fixed;
         top: 78vh;
         left: 0;
@@ -102,7 +87,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .movie-item img[b-sdl9w3h068] {
+    .series-item img {
         width: 100%;
         height: 300px;
         object-fit: cover;

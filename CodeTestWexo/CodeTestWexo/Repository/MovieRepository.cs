@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using CodeTestWexo.Interfaces;
-using CodeTestWexo.Models;
+using CodeTestWexo.Models.Movies;
+using CodeTestWexo.Models.Series;
 using RestSharp;
 
 namespace CodeTestWexo.Repository;
@@ -64,7 +65,7 @@ public class MovieRepository(IRestClientRepository restClientRepository, ILogger
         return movieDiscoverResponse;
     }
 
-    public async Task<List<Video>?> GetMovieVideosAsync(int movieId)
+    public async Task<List<MovieVideo>?> GetMovieVideosAsync(int movieId)
     {
         var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/videos");
         var request = new RestRequest();
@@ -75,7 +76,7 @@ public class MovieRepository(IRestClientRepository restClientRepository, ILogger
             return null; // Return an empty list if no videos
         }
 
-        var videoResponse = JsonSerializer.Deserialize<VideoResponse>(response.Content, new JsonSerializerOptions
+        var videoResponse = JsonSerializer.Deserialize<MovieVideoResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });

@@ -1,4 +1,5 @@
 ﻿using CodeTestWexo.Models;
+using CodeTestWexo.Models.Movies;
 
 namespace CodeTestWexo.Components.Pages;
 
@@ -17,7 +18,7 @@ public partial class RandomMoviePicker
         try
         {
             isLoading = true;
-            genres = await GenreRepository.GetGenresAsync();
+            genres = await GenreRepository.GetMovieGenresAsync();
         }
         finally
         {
