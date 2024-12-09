@@ -7,25 +7,20 @@ namespace CodeTestWexo.Components.Pages
     {
         private List<Genre> genres = new();
         private Dictionary<int, List<Movie>> genreMovies = new();
-        private Dictionary<int, int> genreCounts = new();
-        private Dictionary<int, int> currentPages = new();
-        private Dictionary<int, int> totalPages = new();
+        private Dictionary<int, int> movieCountsPrGenre = new();
         private bool isLoading = true;
 
         protected override async Task OnInitializedAsync()
         {
-            // Fetch genres but do not check cookies here
             try
             {
-                genres = await GenreService.GetGenresAsync();
+                genres = await genreService.GetGenresAsync();
 
                 foreach (var genre in genres)
                 {
-                    var paginatedMovies = await GenreService.GetPaginatedMoviesByGenreAsync(genre.Id, 1);
+                    var paginatedMovies = await genreService.GetPaginatedMoviesByGenreAsync(genre.Id, 1);
                     genreMovies[genre.Id] = paginatedMovies.Movies;
-                    genreCounts[genre.Id] = paginatedMovies.TotalResults;
-                    currentPages[genre.Id] = paginatedMovies.CurrentPage;
-                    totalPages[genre.Id] = paginatedMovies.TotalPages;
+                    movieCountsPrGenre[genre.Id] = paginatedMovies.TotalResults;
                 }
             }
             finally
@@ -36,12 +31,12 @@ namespace CodeTestWexo.Components.Pages
 
         private void NavigateToGenre(int genreId)
         {
-            NavigationManager.NavigateTo($"/genre/{genreId}");
+            navigationManager.NavigateTo($"/genre/{genreId}");
         }
 
         private void NavigateToMovieDetails(int movieId)
         {
-            NavigationManager.NavigateTo($"/movie/{movieId}");
+            navigationManager.NavigateTo($"/movie/{movieId}");
         }
     }
 }

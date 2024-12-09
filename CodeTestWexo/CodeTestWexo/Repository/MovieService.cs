@@ -14,7 +14,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
         var response = await client.GetAsync(request);
         if (response.Content == null)
         {
-            logger.LogError("GetMovieDetailsAsync returned null for movieId: {MovieId}", movieId);
+            logger.LogError("API response content is null for GetMovieDetailsAsync. Response Content: {ResponseContent}", response.Content);
             return null;
         }
 
@@ -27,7 +27,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
 
         if (movieDetails == null)
         {
-            logger.LogWarning("Deserialization returned null for movieId: {MovieId}", movieId);
+            logger.LogWarning("Deserialization returned null for GetMovieDetailsAsync: {MovieDetails}", movieDetails);
             return null;
         }
 
@@ -36,7 +36,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
 
     public async Task<MovieTrendingResponse?> GetTrendingMoviesAsync()
     {
-        //DI for using the RestClient, less of the same code. 
+        //Using the restclient with DI and getting the trending movies by fetching this API 
         var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/movie/popular");
         var request = new RestRequest();
         var response = await client.GetAsync(request);
@@ -47,6 +47,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
             return null;
         }
 
+        
         var movieDiscoverResponse = JsonSerializer.Deserialize<MovieTrendingResponse>(response.Content,
             new JsonSerializerOptions
             {
@@ -56,19 +57,23 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
         if (movieDiscoverResponse == null)
         {
             logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. MovieTrendingResponse is {MovieTrendingResponse}.", movieDiscoverResponse);
+            return null;
         }
 
-        //This does return trending movies
+        //Return trending movies
         return movieDiscoverResponse;
     }
 
-    public async Task<List<Video>> GetMovieVideosAsync(int movieId)
+    public async Task<List<Video>?> GetMovieVideosAsync(int movieId)
     {
         var client = await restClientService.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/videos");
         var request = new RestRequest();
         var response = await client.GetAsync(request);
         if (response?.Content == null)
-            return new List<Video>(); // Return an empty list if no videos
+        {
+            logger.LogError("API response content is null for GetMovieVideosAsync. Response Content: {ResponseContent}", response?.Content);
+            return null; // Return an empty list if no videos
+        }
 
         var videoResponse = JsonSerializer.Deserialize<VideoResponse>(response.Content, new JsonSerializerOptions
         {
@@ -77,7 +82,8 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
 
         if (videoResponse?.Results == null)
         {
-            return new List<Video>();
+            logger.LogWarning("Deserialization returned null for GetMovieVideosAsync. MovieTrendingResponse is {VideoResponse}.", videoResponse);
+            return null;
         }
 
         return videoResponse.Results;

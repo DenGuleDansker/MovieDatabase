@@ -2,9 +2,8 @@
 @using AltairCA.Blazor.WebAssembly.Cookie
 @using CodeTestWexo.Interfaces
 @rendermode InteractiveServer
-@inject NavigationManager NavigationManager
-@inject IGenreService GenreService
-@inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
+@inject IGenreService genreService
 
 <h3>Genres</h3>
 
@@ -21,7 +20,7 @@ else
                 @genre.Name
             </h4>
             <button @onclick="() => NavigateToGenre(genre.Id)">View all movies</button>
-            <p>Total Movies: @genreCounts[genre.Id]</p>
+            <p>Total Movies: @movieCountsPrGenre[genre.Id]</p>
 
             <div class="movies-grid">
                 @foreach (var movie in genreMovies[genre.Id].Take(5))
