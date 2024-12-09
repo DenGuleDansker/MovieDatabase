@@ -48,7 +48,7 @@ else
     private Dictionary<int, List<Serie>> genreMovies = new();
     private Dictionary<int, int> serieCountsPrGenre = new();
     private bool isLoading = true;
-
+    
     protected override async Task OnInitializedAsync()
     {
         try
@@ -59,19 +59,19 @@ else
             //Gets all movies that belongs to a specific genre in the first page. 
             foreach (var genre in genres)
             {
-                var paginatedMovies = await GenreRepository.GetPaginatedSeriesByGenreAsync(genre.Id, 1);
+                var paginatedMovies = await GenreRepository.GetPaginatedSeriesByGenreAsync(genre.Id, 2);
                 genreMovies[genre.Id] = paginatedMovies.Series;
                 serieCountsPrGenre[genre.Id] = paginatedMovies.TotalResults;
             }
         }
-        catch (Exception)
+        finally
         {
-            throw new Exception();
+            isLoading = false;
         }
 
-        isLoading = false;
+        
     }
-
+    
     private void NavigateToGenre(int genreId)
     {
         navigationManager.NavigateTo($"/seriegenre/{genreId}");

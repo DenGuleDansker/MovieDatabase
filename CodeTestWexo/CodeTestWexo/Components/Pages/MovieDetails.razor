@@ -45,7 +45,7 @@ else
                 </p>
 
                 <button @onclick="ToggleWishlist" class="wishlist-btn @GetButtonClass()">
-                    @if (wishList.Contains(movie.Id))
+                    @if (movieWishList.Contains(movie.Id))
                     {
                         <span>Remove from Wishlist</span>
                     }

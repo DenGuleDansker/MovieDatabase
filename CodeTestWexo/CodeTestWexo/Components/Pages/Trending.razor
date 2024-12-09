@@ -1,0 +1,52 @@
+﻿@page "/"
+@using CodeTestWexo.Interfaces
+@rendermode InteractiveServer
+@inject IMovieRepository MovieRepository
+@inject ISerieRepository SerieRepository
+@inject ISearchRepository searchRepository
+@inject NavigationManager NavigationManager
+
+<h3>Trending</h3>
+
+<div class="search-container">
+    <input type="text" @bind="searchQuery" placeholder="Search movies or series..." />
+    <button @onclick="PerformSearch">Search</button>
+</div>
+
+@if (isLoading)
+{
+<p>Loading...</p>
+}
+else if (searchResults?.Any() == true)
+{
+<div class="movies-grid">
+    @foreach (var result in searchResults)
+    {
+    <div class="movie-item" @onclick="() => NavigateToDetails(result)">
+        <img src="https://image.tmdb.org/t/p/w500/@result.PosterPath" alt="@result.MediaType" />
+        <p>@result.Title</p>
+    </div>
+    }
+</div>
+}
+
+@if (!isLoading && (searchResults == null || !searchResults.Any()))
+{
+<div class="movies-grid">
+    @foreach (var movie in movies.Results)
+    {
+    <div class="movie-item" @onclick="() => NavigateToMovieDetails(movie.Id)">
+        <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="@movie.Title" />
+        <p>@movie.Title</p>
+    </div>
+    }
+
+    @foreach (var movie in series.Results)
+    {
+    <div class="movie-item" @onclick="() => NavigateToSerieDetails(movie.Id)">
+        <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="@movie.Title" />
+        <p>@movie.Title</p>
+    </div>
+    }
+</div>
+}

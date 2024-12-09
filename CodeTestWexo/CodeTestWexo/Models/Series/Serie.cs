@@ -19,8 +19,8 @@ public class Serie
     [JsonPropertyName("poster_path")]
     public string? PosterPath { get; set; }
         
-    [JsonPropertyName("release_date")]
-    public DateTime ReleaseDate { get; set; }
+    [JsonPropertyName("first_air_date")]
+    public string AirDate { get; set; }
     
     [JsonPropertyName("name")]
     public string? Title { get; set; }

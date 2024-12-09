@@ -10,7 +10,7 @@ namespace CodeTestWexo.Components.Pages
         private Dictionary<int, List<Movie>> genreMovies = new();
         private Dictionary<int, int> movieCountsPrGenre = new();
         private bool isLoading = true;
-
+        
         protected override async Task OnInitializedAsync()
         {
             try
@@ -26,14 +26,12 @@ namespace CodeTestWexo.Components.Pages
                     movieCountsPrGenre[genre.Id] = paginatedMovies.TotalResults;
                 }
             }
-            catch (Exception)
+            finally
             {
-                throw new Exception();
+                isLoading = false;
             }
-            
-            isLoading = false;
         }
-
+        
         private void NavigateToGenre(int genreId)
         {
             navigationManager.NavigateTo($"/moviegenre/{genreId}");

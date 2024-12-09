@@ -1,0 +1,212 @@
+@page "/serie/{serieID:int}"
+@using CodeTestWexo.Interfaces
+@using CodeTestWexo.Models
+@using CodeTestWexo.Models.Movies
+@using CodeTestWexo.Models.Series
+@inject ISerieRepository SerieRepository
+@inject ICreditRepository CreditsRepository
+@rendermode InteractiveServer
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+@if (serie == null)
+{
+    <p>No movies found...</p>
+}
+else
+{
+    <div class="movie-details-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@($"https://image.tmdb.org/t/p/original{serie.BackdropPath}")'); background-size: cover; background-position: center;">
+        <div class="movie-details-grid">
+            <div class="movie-poster-container">
+                @if (!string.IsNullOrEmpty(serie.PosterPath))
+                {
+                    <img src="@($"https://image.tmdb.org/t/p/w500{serie.PosterPath}")" class="movie-poster" alt="@serie?.Title"/>
+                }
+            </div>
+
+            <div class="movie-info">
+                <h3>@serie?.Title</h3>
+
+                <p>
+                    <strong>Description:</strong> @serie?.Overview
+                </p>
+
+                <p>
+                    <strong>Air date:</strong> @serie?.AirDate
+                </p>
+
+                <p>
+                    <strong>Rating:</strong> @serie?.VoteAverage.ToString("F1")
+                </p>
+
+                <p>
+                    <strong>Overall votes:</strong> @serie?.VoteCount
+                </p>
+
+                <p>
+                    <strong>Genre(s):</strong> @string.Join(", ", serie.Genres.Select(g => g.Name))
+                </p>
+
+                <button @onclick="ToggleWishlist" class="wishlist-btn @GetButtonClass()">
+                    @if (wishList.Contains(serie.Id))
+                    {
+                        <span>Remove from Wishlist</span>
+                    }
+                    else
+                    {
+                        <span>Add to Wishlist</span>
+                    }
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="crews-container">
+        <h4>Directors:</h4>
+        @if (crews.Any())
+        {
+            <div class="crews-row">
+                @foreach (var crew in crews)
+                {
+                    <div class="crew-item">
+                        @if (!string.IsNullOrEmpty(crew.ProfilePath))
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w200{crew.ProfilePath}")" alt="@crew.Name"/>
+                        }
+                        else
+                        {
+                            <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                        }
+                        <p style="font-weight: bold">@crew.Name</p>
+                        <p>@crew.Job</p>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>No crews available for this movie.</p>
+        }
+    </div>
+
+    <div class="actors-container">
+        <h4>Actors:</h4>
+        @if (displayedActorCount < casts.Count)
+        {
+            <button @onclick="LoadMoreActors" class="crewandcast-btn">Load More Actors</button>
+        }
+        else if (casts.Count == null)
+        {
+            <button @onclick="FoldActors" class="crewandcast-btn">Fold crew</button>
+        }
+
+        @if (casts.Any())
+        {
+            <div class="actors-row">
+                @foreach (var actor in casts.Take(displayedActorCount))
+                {
+                    <div class="actor-item">
+                        @if (!string.IsNullOrEmpty(actor.ProfilePath))
+                        {
+                            <img src="@($"https://image.tmdb.org/t/p/w200{actor.ProfilePath}")" alt="@actor.Name"/>
+                        }
+                        else
+                        {
+                            <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                        }
+                        <p style="font-weight: bold">@actor.Name</p>
+                        <p>@actor.Character</p>
+                        <p>@actor.KnownForDepartment</p>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>No actors available for this movie.</p>
+        }
+    </div>
+}
+
+@code
+{
+    [Parameter] public int serieId { get; set; }
+    private Serie? serie;
+    private List<CastCredits> casts = new List<CastCredits>();
+    private List<CrewCredits> crews = new List<CrewCredits>();
+    private List<int> wishList = new List<int>();
+    private int displayedActorCount = 9;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch movie details
+        serie = await SerieRepository.GetSerieDetailsAsync(serieId);
+
+        // Fetch movie actors
+        casts = await CreditsRepository.GetActorsByMovieIdAsync(serieId);
+
+        //Fetch movie crew
+        crews = await CreditsRepository.GetCrewsByMovieIdAsync(serieId);
+
+        // Remove duplicates in crews based on their ID
+        crews = crews
+            .Where(crew => crew.Job != null && crew.Job.Contains("Director", StringComparison.OrdinalIgnoreCase)) // Filter jobs containing "Director"
+            .ToList();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Retrieve the current wishlist from localStorage
+            wishList = await localStorage.GetItemAsync<List<int>>("seriewishlist") ?? new List<int>();
+
+            StateHasChanged();
+        }
+    }
+
+    private async Task ToggleWishlist()
+    {
+        if (serie == null)
+        {
+            return;
+        }
+
+        if (wishList.Contains(serie.Id))
+        {
+            wishList.Remove(serie.Id); // Remove movie from wishlist
+        }
+        else
+        {
+            wishList.Add(serie.Id); // Add movie to wishlist
+        }
+
+        // Save the updated wishlist to localStorage
+        await localStorage.SetItemAsync("seriewishlist", wishList);
+    }
+
+    private void LoadMoreActors()
+    {
+        // Increase the displayed count by 5 or display all remaining actors
+        displayedActorCount = casts.Count;
+    }
+
+    private void FoldActors()
+    {
+        displayedActorCount = 9;
+    }
+
+    private string GetButtonClass()
+    {
+        if (serie == null)
+        {
+            return string.Empty; // Return a default value if movie is null
+        }
+
+        if (wishList.Contains(serie.Id))
+        {
+            return "red-btn"; // Movie is in the wishlist
+        }
+
+        return "green-btn"; // Movie is not in the wishlist
+    }
+}

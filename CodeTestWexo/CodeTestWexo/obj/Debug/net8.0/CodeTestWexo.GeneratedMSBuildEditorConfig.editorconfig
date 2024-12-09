@@ -60,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope = b-nbq68995sq
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSYW5kb21Nb3ZpZVBpY2tlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-o2a4kuhhmi
 
+[C:/Users/chili/Desktop/MovieDatabase/CodeTestWexo/CodeTestWexo/Components/Pages/SerieDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJpZURldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9lpeu0npv9
+
 [C:/Users/chili/Desktop/MovieDatabase/CodeTestWexo/CodeTestWexo/Components/Pages/SerieGenreDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJpZUdlbnJlRGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-rs74go22kp
@@ -68,13 +72,9 @@ build_metadata.AdditionalFiles.CssScope = b-rs74go22kp
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJpZUdlbnJlUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-wn9k7akgcm
 
-[C:/Users/chili/Desktop/MovieDatabase/CodeTestWexo/CodeTestWexo/Components/Pages/TrendingMovie.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmVuZGluZ01vdmllLnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-47wfdtn8vr
-
-[C:/Users/chili/Desktop/MovieDatabase/CodeTestWexo/CodeTestWexo/Components/Pages/TrendingSerie.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmVuZGluZ1NlcmllLnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-yg52rcn7i4
+[C:/Users/chili/Desktop/MovieDatabase/CodeTestWexo/CodeTestWexo/Components/Pages/Trending.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmVuZGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-whk2n056gv
 
 [C:/Users/chili/Desktop/MovieDatabase/CodeTestWexo/CodeTestWexo/Components/Pages/Wishlist.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXaXNobGlzdC5yYXpvcg==

@@ -11,7 +11,7 @@ public partial class MovieDetails
     private List<MovieVideo>? videos = new();
     private List<CastCredits> casts = new List<CastCredits>();
     private List<CrewCredits> crews = new List<CrewCredits>();
-    private List<int> wishList = new List<int>(); 
+    private List<int> movieWishList = new List<int>(); 
     private int displayedActorCount = 9; 
 
     protected override async Task OnInitializedAsync()
@@ -41,7 +41,7 @@ public partial class MovieDetails
         if (firstRender)
         {
             // Retrieve the current wishlist from localStorage
-            wishList = await localStorage.GetItemAsync<List<int>>("wishlist") ?? new List<int>();
+            movieWishList = await localStorage.GetItemAsync<List<int>>("moviewishlist") ?? new List<int>();
 
             StateHasChanged(); 
         }
@@ -54,17 +54,17 @@ public partial class MovieDetails
             return; 
         }
 
-        if (wishList.Contains(movie.Id))
+        if (movieWishList.Contains(movie.Id))
         {
-            wishList.Remove(movie.Id); // Remove movie from wishlist
+            movieWishList.Remove(movie.Id); // Remove movie from wishlist
         }
         else
         {
-            wishList.Add(movie.Id); // Add movie to wishlist
+            movieWishList.Add(movie.Id); // Add movie to wishlist
         }
 
         // Save the updated wishlist to localStorage
-        await localStorage.SetItemAsync("wishlist", wishList);
+        await localStorage.SetItemAsync("moviewishlist", movieWishList);
     }
     
     private void LoadMoreActors()
@@ -84,7 +84,7 @@ public partial class MovieDetails
             return string.Empty; // Return a default value if movie is null
         }
 
-        if (wishList.Contains(movie.Id))
+        if (movieWishList.Contains(movie.Id))
         {
             return "red-btn"; // Movie is in the wishlist
         }

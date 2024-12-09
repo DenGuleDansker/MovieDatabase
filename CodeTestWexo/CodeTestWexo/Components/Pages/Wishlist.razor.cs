@@ -1,16 +1,20 @@
 ﻿using CodeTestWexo.Models;
 using CodeTestWexo.Models.Movies;
+using CodeTestWexo.Models.Series;
 
 namespace CodeTestWexo.Components.Pages;
 
 public partial class Wishlist
 {
-    private List<Movie> wishlist = new List<Movie>();
+    private List<Serie> serieWishList = new List<Serie>();
+    private List<Movie> movieWishList = new List<Movie>();
 
     protected override async Task OnInitializedAsync()
     {
         // Retrieve the movie IDs from localStorage
-        var movieIds = await localStorage.GetItemAsync<List<int>>("wishlist") ?? new List<int>();
+        var movieIds = await localStorage.GetItemAsync<List<int>>("moviewishlist") ?? new List<int>();
+        
+        var serieIds = await localStorage.GetItemAsync<List<int>>("seriewishlist") ?? new List<int>();
         
         // Fetch the movie details for each movieId
         foreach (var movieId in movieIds)
@@ -18,27 +22,52 @@ public partial class Wishlist
             var movie = await MovieRepository.GetMovieDetailsAsync(movieId);
             if (movie != null)
             {
-                wishlist.Add(movie); // Add movie to the wishlist
+                movieWishList.Add(movie); // Add movie to the wishlist
+            }
+        }
+        
+        foreach (var serieId in serieIds)
+        {
+            var serie = await SerieRepository.GetSerieDetailsAsync(serieId);
+            if (serie != null)
+            {
+                serieWishList.Add(serie); // Add movie to the wishlist
             }
         }
         
         StateHasChanged();
     }
 
-    private async Task RemoveFromWishlist(int movieId)
+    private async Task RemoveMovieFromWishlist(int movieId)
     {
         // Remove movie from the wishlist list
-        var movieToRemove = wishlist.FirstOrDefault(m => m.Id == movieId);
+        var movieToRemove = movieWishList.FirstOrDefault(m => m.Id == movieId);
         if (movieToRemove != null)
         {
-            wishlist.Remove(movieToRemove);
+            movieWishList.Remove(movieToRemove);
 
             // Remove movieId from localStorage
-            var movieIds = await localStorage.GetItemAsync<List<int>>("wishlist") ?? new List<int>();
+            var movieIds = await localStorage.GetItemAsync<List<int>>("moviewishlist") ?? new List<int>();
             movieIds.Remove(movieId);
 
             // Save the updated wishlist to localStorage
-            await localStorage.SetItemAsync("wishlist", movieIds);
+            await localStorage.SetItemAsync("moviewishlist", movieIds);
+        }
+    }
+    private async Task RemoveSerieFromWishlist(int serieId)
+    {
+        // Remove movie from the wishlist list
+        var serieToRemove = serieWishList.FirstOrDefault(m => m.Id == serieId);
+        if (serieToRemove != null)
+        {
+            serieWishList.Remove(serieToRemove);
+
+            // Remove movieId from localStorage
+            var movieIds = await localStorage.GetItemAsync<List<int>>("seriewishlist") ?? new List<int>();
+            movieIds.Remove(serieId);
+
+            // Save the updated wishlist to localStorage
+            await localStorage.SetItemAsync("seriewishlist", movieIds);
         }
     }
 
@@ -46,5 +75,11 @@ public partial class Wishlist
     {
         // Redirect to the movie details page
         Navigation.NavigateTo($"/movie/{movieId}");
+    }
+    
+    private void RedirectToSeriePage(int serieId)
+    {
+        // Redirect to the movie details page
+        Navigation.NavigateTo($"/serie/{serieId}");
     }
 }
