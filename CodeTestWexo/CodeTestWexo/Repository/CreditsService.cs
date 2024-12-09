@@ -28,7 +28,7 @@ public class CreditsService(IRestClientService restClientService, ILogger<Credit
 
         if (credits?.Cast == null)
         {
-            logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. GetActorsByMovieIdAsync is {credits}.", credits);
+            logger.LogWarning("Deserialization returned null for GetActorsByMovieIdAsync. GetActorsByMovieIdAsync is {credits}.", credits);
             return new List<CastCredits>();
         }
 
@@ -44,7 +44,7 @@ public class CreditsService(IRestClientService restClientService, ILogger<Credit
         var response = await client.GetAsync(request);
         if (response?.Content == null)
         {
-            logger.LogError("API response content is null for GetActorsByMovieIdAsync. Response Content: {ResponseContent}", response?.Content);
+            logger.LogError("API response content is null for GetCrewsByMovieIdAsync. Response Content: {ResponseContent}", response?.Content);
             return new List<CrewCredits>();
         }
 
@@ -56,7 +56,7 @@ public class CreditsService(IRestClientService restClientService, ILogger<Credit
 
         if (credits?.Crew == null)
         {
-            logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. GetActorsByMovieIdAsync is {credits}.", credits);
+            logger.LogWarning("Deserialization returned null for GetCrewsByMovieIdAsync. GetCrewsByMovieIdAsync is {credits}.", credits);
             return new List<CrewCredits>();
         }
 

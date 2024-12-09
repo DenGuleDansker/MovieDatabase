@@ -27,7 +27,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
 
         if (movieDetails == null)
         {
-            logger.LogWarning("Deserialization returned null for GetMovieDetailsAsync: {MovieDetails}", movieDetails);
+            logger.LogWarning("Deserialization returned null for GetMovieDetailsAsync. GetMovieDetailsAsync is {movieDetails}.", movieDetails);
             return null;
         }
 
@@ -56,7 +56,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
         
         if (movieDiscoverResponse == null)
         {
-            logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. MovieTrendingResponse is {MovieTrendingResponse}.", movieDiscoverResponse);
+            logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. GetTrendingMoviesAsync is {MovieTrendingResponse}.", movieDiscoverResponse);
             return null;
         }
 
@@ -82,7 +82,7 @@ public class MovieService(IRestClientService restClientService, ILogger<MovieSer
 
         if (videoResponse?.Results == null)
         {
-            logger.LogWarning("Deserialization returned null for GetMovieVideosAsync. MovieTrendingResponse is {VideoResponse}.", videoResponse);
+            logger.LogWarning("Deserialization returned null for GetMovieVideosAsync. GetMovieVideosAsync is {VideoResponse}.", videoResponse);
             return null;
         }
 

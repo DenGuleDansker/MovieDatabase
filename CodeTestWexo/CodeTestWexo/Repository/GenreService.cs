@@ -27,7 +27,7 @@ public class GenreService(IRestClientService restClientService, ILogger<GenreSer
 
         if (genreList?.Genres == null)
         {
-            logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. MovieTrendingResponse is {genreList}.", genreList);
+            logger.LogWarning("Deserialization returned null for GetGenresAsync. GetGenresAsync is {genreList}.", genreList);
             return new List<Genre>();
         }
 
@@ -57,7 +57,7 @@ public class GenreService(IRestClientService restClientService, ILogger<GenreSer
 
         if (movieList == null)
         {
-            logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. GetPaginatedMoviesByGenreAsync is {movieList}.", movieList);
+            logger.LogWarning("Deserialization returned null for GetPaginatedMoviesByGenreAsync. GetPaginatedMoviesByGenreAsync is {movieList}.", movieList);
             return new PaginatedMovies();
         }
 
