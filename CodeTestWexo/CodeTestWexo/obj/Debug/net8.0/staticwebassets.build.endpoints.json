@@ -3,6 +3,51 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "CodeTestWexo.596loyl96i.styles.css",
+      "AssetFile": "CodeTestWexo.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19798"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YLal5er1fpp+bTyYuDhCWiVn3whF0Q7D/3UVcsHMxc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Dec 2024 15:44:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "596loyl96i"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YLal5er1fpp+bTyYuDhCWiVn3whF0Q7D/3UVcsHMxc="
+        },
+        {
+          "Name": "label",
+          "Value": "CodeTestWexo.styles.css"
+        }
+      ]
+    },
+    {
       "Route": "CodeTestWexo.styles.css",
       "AssetFile": "CodeTestWexo.styles.css",
       "Selectors": [],
@@ -17,7 +62,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19844"
+          "Value": "19798"
         },
         {
           "Name": "Content-Type",
@@ -25,62 +70,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8l5tRH/7qp78FAdPxFv5oPpx9ra4fmBjtMQCPOHDkhY=\""
+          "Value": "\"6YLal5er1fpp+bTyYuDhCWiVn3whF0Q7D/3UVcsHMxc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 13:11:17 GMT"
+          "Value": "Mon, 09 Dec 2024 15:44:01 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8l5tRH/7qp78FAdPxFv5oPpx9ra4fmBjtMQCPOHDkhY="
-        }
-      ]
-    },
-    {
-      "Route": "CodeTestWexo.ukqaolnczf.styles.css",
-      "AssetFile": "CodeTestWexo.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "19844"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8l5tRH/7qp78FAdPxFv5oPpx9ra4fmBjtMQCPOHDkhY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 13:11:17 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ukqaolnczf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-8l5tRH/7qp78FAdPxFv5oPpx9ra4fmBjtMQCPOHDkhY="
-        },
-        {
-          "Name": "label",
-          "Value": "CodeTestWexo.styles.css"
+          "Value": "sha256-6YLal5er1fpp+bTyYuDhCWiVn3whF0Q7D/3UVcsHMxc="
         }
       ]
     },

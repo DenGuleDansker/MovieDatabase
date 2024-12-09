@@ -30,13 +30,12 @@
 
     @if (randomMovie != null)
     {
-        <div class="movie-details">
+        <div class="movie-details" @onclick="() => NavigateToMovieDetails(randomMovie.Id)">
             <h4>@randomMovie.Title</h4>
             <div class="movie-image-container">
                 <img src="@($"https://image.tmdb.org/t/p/w500{randomMovie.PosterPath}")" alt="@randomMovie.Title"/>
             </div>
             <p>@randomMovie.Overview</p>
-            <button @onclick="() => NavigateToMovieDetails(randomMovie.Id)">See movie details</button>
         </div>
     }
     else if (randomMovieNotFound)
