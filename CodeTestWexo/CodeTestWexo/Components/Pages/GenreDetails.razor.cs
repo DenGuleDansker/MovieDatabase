@@ -8,6 +8,8 @@ public partial class GenreDetails
     [Parameter] public int genreId { get; set; }
     private string genreName;
     private PaginatedMovies paginatedMovies = new PaginatedMovies();
+    private bool IsPreviousDisabled() => paginatedMovies.CurrentPage <= 1;
+    private bool IsNextDisabled() => paginatedMovies.CurrentPage >= paginatedMovies.TotalPages;
 
     protected override async Task OnInitializedAsync()
     {
@@ -28,6 +30,9 @@ public partial class GenreDetails
         await LoadGenreDetailsAsync(newPage);
     }
 
-    private bool IsPreviousDisabled() => paginatedMovies.CurrentPage <= 1;
-    private bool IsNextDisabled() => paginatedMovies.CurrentPage >= paginatedMovies.TotalPages;
+    private void NavigateToMovieDetails(int movieId)
+    {
+        navigationManager.NavigateTo($"/movie/{movieId}");
+    }
+
 }

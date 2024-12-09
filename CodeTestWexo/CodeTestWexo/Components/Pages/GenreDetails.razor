@@ -1,8 +1,8 @@
 ﻿@page "/genre/{genreId:int}"
-@using CodeTestWexo.Components.Models
 @using CodeTestWexo.Interfaces
 @rendermode InteractiveServer
 @inject IGenreService GenreService
+@inject NavigationManager navigationManager
 
 <h3>@genreName</h3>
 <p>Total Movies: @paginatedMovies.TotalResults</p>
@@ -16,12 +16,9 @@ else
     <div class="movies-grid">
         @foreach (var movie in paginatedMovies.Movies.Take(14))
         {
-            <div class="movie-item">
+            <div class="movie-item" @onclick="() => NavigateToMovieDetails(movie.Id)">
                 <img src="@($"https://image.tmdb.org/t/p/w500{movie.PosterPath}")" alt="@movie.Title" />
                 <p>@movie.Title</p>
-                <a href="@($"/movie/{movie.Id}")">
-                    <button class="view-details-btn">View Details</button>
-                </a>
             </div>
         }
     </div>
