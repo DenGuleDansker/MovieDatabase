@@ -1,6 +1,6 @@
 # Movie Database Application
 
-This is a Movie Database application built with .NET 8 and Blazor. It fetches movie data from an external API and provides a user-friendly interface to browse, search, and manage a movie wishlist.
+This is a Movie Database application built with .NET 8 and Blazor. It fetches movie data from an external API from https://www.themoviedb.org/ and provides a user-friendly interface to browse, and manage a movie wishlist.
 
 ## Requirements
 
