@@ -22,6 +22,7 @@ public class Serie
     [JsonPropertyName("release_date")]
     public DateTime ReleaseDate { get; set; }
     
+    [JsonPropertyName("name")]
     public string? Title { get; set; }
     
     [JsonPropertyName("vote_average")]
