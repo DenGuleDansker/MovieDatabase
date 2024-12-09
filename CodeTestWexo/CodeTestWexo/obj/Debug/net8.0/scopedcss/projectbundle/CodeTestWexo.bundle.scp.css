@@ -214,10 +214,6 @@ body[b-69k8r7afcp] {
     }
 }
 /* _content/CodeTestWexo/Components/Pages/GenreDetails.razor.rz.scp.css */
-.genre-section[b-sdl9w3h068] {
-    margin-bottom: 20px;
-}
-
 .movies-grid[b-sdl9w3h068] {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
@@ -250,38 +246,10 @@ body[b-69k8r7afcp] {
     font-weight: bold;
 }
 
-.movie-item button.view-details-btn[b-sdl9w3h068] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 12px;
-}
-
-.movie-item button.view-details-btn:hover[b-sdl9w3h068] {
-    background-color: #0056b3; 
-}
-
 .pagination[b-sdl9w3h068] {
     display: flex;
     gap: 8px;
     margin-top: 20px;
-}
-
-.page-btn[b-sdl9w3h068] {
-    padding: 8px 16px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.page-btn:hover[b-sdl9w3h068] {
-    background-color: #0056b3;
 }
 
 .pagination button[b-sdl9w3h068] {
@@ -542,16 +510,6 @@ iframe[b-ppw9tb1rus] {
     margin-bottom: 15px;
 }
 
-.movie-item button[b-q0uvjowmxc] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
 .genre-section button[b-q0uvjowmxc]{
     background-color: #007bff;
     color: white;
@@ -562,23 +520,6 @@ iframe[b-ppw9tb1rus] {
     transition: background-color 0.3s ease;
 }
 
-.movie-item button:hover[b-q0uvjowmxc] {
-    background-color: #0056b3;
-}
-
-.load-more-button[b-q0uvjowmxc] {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.load-more-button:hover[b-q0uvjowmxc] {
-    background-color: #0056b3;
-}
 
 @media (max-width: 768px) {
     .movie-item[b-q0uvjowmxc] {
@@ -725,22 +666,6 @@ p[b-o2a4kuhhmi] {
     margin: 10px 0;
     color: #333;
 }
-
-.movie-item button[b-47wfdtn8vr] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
-}
-
-.movie-item button:hover[b-47wfdtn8vr] {
-    background-color: #0056b3;
-}
-
 
 p[b-47wfdtn8vr] {
     font-size: 1.2rem;
