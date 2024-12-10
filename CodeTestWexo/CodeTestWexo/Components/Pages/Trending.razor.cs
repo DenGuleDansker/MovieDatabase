@@ -51,7 +51,9 @@ public partial class Trending
 
         isLoading = true;
         var response = await searchRepository.GetSearchDetailsAsync(searchQuery);
-        searchResults = response?.Results?.Where(r => r.MediaType != "person").ToList() ?? new List<SearchItem>();  // Only show movies/series
+        searchResults = response?.Results?.Where(r => r.MediaType != "person")
+            .OrderByDescending(r => r.Popularity)
+            .ToList() ?? new List<SearchItem>();  // Only show movies/series
         isLoading = false;
     }
     

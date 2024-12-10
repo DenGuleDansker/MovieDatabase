@@ -6,51 +6,58 @@
 @inject ISearchRepository searchRepository
 @inject NavigationManager NavigationManager
 
-<h3>Trending</h3>
 
 <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search movies or series..." @oninput="OnInputSearch" />
+    <input type="text" id="searchInput" placeholder="Search movies or series..." @oninput="OnInputSearch"/>
 </div>
 
 @if (isLoading)
 {
-<p>Loading...</p>
+    <p>Loading...</p>
 }
 else if (searchResults?.Any() == true)
 {
-<div class="movies-grid">
-    @foreach (var result in searchResults)
-    {
-    @* Only show if the media type is not "person" *@
-    @if (result.MediaType != "person")
-    {
-    <div class="movie-item" @onclick="() => NavigateToDetails(result)">
-        <img src="https://image.tmdb.org/t/p/w500/@result.PosterPath" alt="@result.Title"/>
-        <p>@result.Title</p>
+    <div class="movies-grid">
+        @foreach (var result in searchResults)
+        {
+            @* Only show if the media type is not "person" *@
+            @if (result.MediaType != "person")
+            {
+                <div class="movie-item" @onclick="() => NavigateToDetails(result)">
+                    @if (!string.IsNullOrEmpty(result.PosterPath))
+                    {
+                        <img src="https://image.tmdb.org/t/p/w500/@result.PosterPath" alt="@((result.MediaType == "tv") ? result.Name : result.Title)"/>
+                    }
+                    else
+                    {
+                        <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
+                    }
+                    <p>@((result.MediaType == "tv") ? result.Name : result.Title)</p>
+                </div>
+            }
+        }
     </div>
-    }
-    }
-</div>
-
 }
 
 @if (!isLoading && (searchResults == null || !searchResults.Any()))
 {
-<div class="movies-grid">
-    @foreach (var movie in movies.Results)
-    {
-    <div class="movie-item" @onclick="() => NavigateToMovieDetails(movie.Id)">
-        <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="@movie.Title" />
-        <p>@movie.Title</p>
-    </div>
-    }
+    <h3>Trending movies and series</h3>
 
-    @foreach (var movie in series.Results)
-    {
-    <div class="movie-item" @onclick="() => NavigateToSerieDetails(movie.Id)">
-        <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="@movie.Title" />
-        <p>@movie.Title</p>
+    <div class="movies-grid">
+        @foreach (var movie in movies.Results)
+        {
+            <div class="movie-item" @onclick="() => NavigateToMovieDetails(movie.Id)">
+                <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="@movie.Title"/>
+                <p>@movie.Title</p>
+            </div>
+        }
+
+        @foreach (var movie in series.Results)
+        {
+            <div class="movie-item" @onclick="() => NavigateToSerieDetails(movie.Id)">
+                <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="@movie.Title"/>
+                <p>@movie.Title</p>
+            </div>
+        }
     </div>
-    }
-</div>
 }

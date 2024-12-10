@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodeTestWexo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da7e37df3b2a31326630359bead6fd3ccce3cce1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b7720611d94868e3592a3afd4750f057d91b171")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeTestWexo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeTestWexo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

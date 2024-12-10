@@ -24,13 +24,13 @@ else if (searchResults?.Any() == true)
                 <div class="actor-item" @onclick="() => NavigateToActorDetails(result)">
                     @if (!string.IsNullOrEmpty(result.ProfilePath))
                     {
-                        <img src="https://image.tmdb.org/t/p/w500/@result.ProfilePath" alt="@result.Title" />
+                        <img src="https://image.tmdb.org/t/p/w500/@result.ProfilePath" alt="@result.Name" />
                     }
                     else
                     {
                     <img src="https://via.placeholder.com/200x300.png?text=No+Image" alt="No Image Available"/>
                     }
-                    <p>@result.Title</p>
+                    <p>@result.Name</p>
 
                 </div>
             }

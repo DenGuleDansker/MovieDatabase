@@ -142,10 +142,10 @@ else
         serie = await SerieRepository.GetSerieDetailsAsync(serieId);
 
         // Fetch movie actors
-        casts = await CreditsRepository.GetActorsByMovieIdAsync(serieId);
+        casts = await CreditsRepository.GetActorsBySeriesIdAsync(serieId);
 
         //Fetch movie crew
-        crews = await CreditsRepository.GetCrewsByMovieIdAsync(serieId);
+        crews = await CreditsRepository.GetCrewsBySeriesIdAsync(serieId);
 
         // Remove duplicates in crews based on their ID
         crews = crews
