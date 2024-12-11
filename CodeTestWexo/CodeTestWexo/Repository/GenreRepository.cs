@@ -25,17 +25,20 @@ public class GenreRepository(IRestClient restClient, ILogger<GenreRepository> lo
             return new List<Genre>();
         }
 
+        //Deserialize of response content
         var genreList = JsonSerializer.Deserialize<GenreResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });
 
+        //Want to log if the response is null
         if (genreList?.Genres == null)
         {
             logger.LogWarning("Deserialization returned null for GetGenresAsync. GetGenresAsync is {genreList}.", genreList);
             return new List<Genre>();
         }
 
+        //Returning my genres list
         return genreList.Genres;
     }
 
@@ -55,28 +58,34 @@ public class GenreRepository(IRestClient restClient, ILogger<GenreRepository> lo
             return new PaginatedMovies();
         }
 
+        //Deserialize of response content
         var movieList = JsonSerializer.Deserialize<MovieResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });
 
+        //Want to log if the response is null
         if (movieList == null)
         {
             logger.LogWarning("Deserialization returned null for GetPaginatedMoviesByGenreAsync. GetPaginatedMoviesByGenreAsync is {movieList}.", movieList);
             return new PaginatedMovies();
         }
 
+        //Creating a new instance. 
         var paginatedMovies = new PaginatedMovies();
         paginatedMovies.CurrentPage = page;
         paginatedMovies.TotalResults = movieList.TotalResults;
         paginatedMovies.TotalPages = defaultTotalPages;
 
+        //Return empty list if null
         if (movieList.Results == null)
         {
+            logger.LogWarning("Movie results returned null for GetPaginatedMoviesByGenreAsync. movieList is {movieListResults}.", movieList.Results);
             return new PaginatedMovies();
         }
         paginatedMovies.Movies = movieList.Results;
 
+        //returning pagination
         return paginatedMovies;
 
     }

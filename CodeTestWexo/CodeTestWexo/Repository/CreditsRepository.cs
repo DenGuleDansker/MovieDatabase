@@ -34,6 +34,7 @@ public class CreditsRepository(IRestClient restClient, ILogger<CreditsRepository
             return new List<CastCredits>();
         }
 
+        //returning casts
         return credits.Cast;
     }
     
@@ -65,6 +66,7 @@ public class CreditsRepository(IRestClient restClient, ILogger<CreditsRepository
             return new List<CrewCredits>();
         }
 
+        //returning crews
         return credits.Crew;
     }
 }

@@ -13,12 +13,12 @@ public partial class GenreDetails
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadGenreDetailsAsync(1); // Load first page
+        await LoadGenreDetailsAsync(1); // Load first page for GetPaginatedMoviesByGenreAsync
     }
 
     private async Task LoadGenreDetailsAsync(int page)
     {
-        // Fetch movies for the selected genre and page
+        // Fetch movies from GetPaginatedMoviesByGenreAsync with genreId from the navigationManager and page is taken from the parameter from OnInitializedAsync
         paginatedMovies = await GenreRepository.GetPaginatedMoviesByGenreAsync(genreId, page);
     }
 
