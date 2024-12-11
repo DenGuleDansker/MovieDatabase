@@ -15,7 +15,7 @@ builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 builder.Services.AddScoped<ICreditRepository, CreditsRepository>();
 builder.Services.AddBlazoredLocalStorage();
 
-// Singleton means its living as long as the application is living
+// Starts and live until application is shut down
 builder.Services.AddSingleton<IRestClient>(provider =>
 {
     var configuration = provider.GetRequiredService<IConfiguration>();
