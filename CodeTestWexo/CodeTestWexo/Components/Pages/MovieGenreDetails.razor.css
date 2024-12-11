@@ -1,8 +1,4 @@
-﻿.genre-section {
-    margin-bottom: 20px;
-}
-
-.movies-grid {
+﻿.movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     gap: 12px;
@@ -34,38 +30,10 @@
     font-weight: bold;
 }
 
-.movie-item button.view-details-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 12px;
-}
-
-.movie-item button.view-details-btn:hover {
-    background-color: #0056b3; 
-}
-
 .pagination {
     display: flex;
     gap: 8px;
     margin-top: 20px;
-}
-
-.page-btn {
-    padding: 8px 16px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.page-btn:hover {
-    background-color: #0056b3;
 }
 
 .pagination button {

@@ -7,14 +7,19 @@ using RestSharp;
 
 namespace CodeTestWexo.Repository;
 
-public class GenreRepository(IRestClientRepository restClientRepository, ILogger<GenreRepository> logger) : IGenreRepository
+public class GenreRepository(IRestClient restClient, ILogger<GenreRepository> logger) : IGenreRepository
 {
+
+    private int defaultTotalPages = 25;
     
     public async Task<List<Genre>> GetMovieGenresAsync()
     {
-        var client = await restClientRepository.GetClientAsync("https://api.themoviedb.org/3/genre/movie/list");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        //Making my request
+        var request = new RestRequest()
+        {
+            Resource = "3/genre/movie/list"
+        };
+        var response = await restClient.GetAsync(request);
 
         if (response?.Content == null)
         {
@@ -22,11 +27,13 @@ public class GenreRepository(IRestClientRepository restClientRepository, ILogger
             return new List<Genre>();
         }
 
+        //Deserialize of response content
         var movieGenreList = JsonSerializer.Deserialize<GenreResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });
 
+        //Want to log if the response is null
         if (movieGenreList?.Genres == null)
         {
             logger.LogWarning("Deserialization returned null for GetMovieGenresAsync. GetMovieGenresAsync is {genreList}.", movieGenreList);
@@ -38,16 +45,18 @@ public class GenreRepository(IRestClientRepository restClientRepository, ILogger
     
     public async Task<List<Genre>> GetSerieGenresAsync()
     {
-        var client = await restClientRepository.GetClientAsync("https://api.themoviedb.org/3/genre/tv/list");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        var request = new RestRequest()
+        {
+            Resource = $"3/genre/tv/list"
+        };
+        var response = await restClient.GetAsync(request);
 
         if (response?.Content == null)
         {
             logger.LogError("API response content is null for GetSeriesGenresAsync. Response Content: {ResponseContent}", response?.Content);
             return new List<Genre>();
         }
-
+        
         var serieGenreList = JsonSerializer.Deserialize<GenreResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
@@ -64,13 +73,13 @@ public class GenreRepository(IRestClientRepository restClientRepository, ILogger
 
     public async Task<PaginatedMovies> GetPaginatedMoviesByGenreAsync(int genreId, int page)
     {
-        //Use for pagination later in the frontend
-        var defaultTotalPages = 25;
         
-        //Use for fetching the showcases for GenresHomePage and for pagination for MovieHomePage
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/discover/movie?with_genres={genreId}&page={page}");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        //Making my request
+        var request = new RestRequest()
+        {
+            Resource = $"3/discover/movie?with_genres={genreId}&page={page}"
+        };
+        var response = await restClient.GetAsync(request);
 
         if (response?.Content == null)
         {
@@ -78,28 +87,34 @@ public class GenreRepository(IRestClientRepository restClientRepository, ILogger
             return new PaginatedMovies();
         }
 
+        //Deserialize of response content
         var movieList = JsonSerializer.Deserialize<MovieResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });
 
+        //Want to log if the response is null
         if (movieList == null)
         {
             logger.LogWarning("Deserialization returned null for GetPaginatedMoviesByGenreAsync. GetPaginatedMoviesByGenreAsync is {movieList}.", movieList);
             return new PaginatedMovies();
         }
 
+        //Creating a new instance. 
         var paginatedMovies = new PaginatedMovies();
         paginatedMovies.CurrentPage = page;
         paginatedMovies.TotalResults = movieList.TotalResults;
         paginatedMovies.TotalPages = defaultTotalPages;
 
+        //Return empty list if null
         if (movieList.Results == null)
         {
+            logger.LogWarning("Movie results returned null for GetPaginatedMoviesByGenreAsync. movieList is {movieListResults}.", movieList.Results);
             return new PaginatedMovies();
         }
         paginatedMovies.Movies = movieList.Results;
 
+        //returning pagination
         return paginatedMovies;
 
     }
@@ -110,9 +125,11 @@ public class GenreRepository(IRestClientRepository restClientRepository, ILogger
         var defaultTotalPages = 25;
         
         //Use for fetching the showcases for GenresHomePage and for pagination for MovieHomePage
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/discover/tv?with_genres={genreId}&page={page}");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        var request = new RestRequest()
+        {
+            Resource = $"3/discover/tv?with_genres={genreId}&page={page}"
+        };
+        var response = await restClient.GetAsync(request);
 
         if (response?.Content == null)
         {

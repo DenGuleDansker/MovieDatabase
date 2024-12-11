@@ -5,14 +5,18 @@ using CodeTestWexo.Models.Series;
 using RestSharp;
 
 namespace CodeTestWexo.Repository;
-public class MovieRepository(IRestClientRepository restClientRepository, ILogger<MovieRepository> logger) : IMovieRepository
+public class MovieRepository(IRestClient restClient, ILogger<MovieRepository> logger) : IMovieRepository
 {
     public async Task<Movie?> GetMovieDetailsAsync(int movieId)
     {
-        //DI for using the RestClient, less of the same code. 
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        //Making my new request here
+        var request = new RestRequest()
+        {
+            Resource = $"3/movie/{movieId}"
+        };
+        
+        //Restclient own method
+        var response = await restClient.GetAsync(request);
         if (response.Content == null)
         {
             logger.LogError("API response content is null for GetMovieDetailsAsync. Response Content: {ResponseContent}", response.Content);
@@ -37,10 +41,13 @@ public class MovieRepository(IRestClientRepository restClientRepository, ILogger
 
     public async Task<MovieTrendingResponse?> GetTrendingMoviesAsync()
     {
-        //Using the restclient with DI and getting the trending movies by fetching this API 
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/popular");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        //Making my new request here
+        var request = new RestRequest()
+        {
+            Resource = "3/movie/popular"
+        };
+        //Restclient own method
+        var response = await restClient.GetAsync(request);
         
         if (response.Content == null)
         {
@@ -48,13 +55,14 @@ public class MovieRepository(IRestClientRepository restClientRepository, ILogger
             return null;
         }
 
-        
+        //Converting JSON into C# objects
         var movieDiscoverResponse = JsonSerializer.Deserialize<MovieTrendingResponse>(response.Content,
             new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
         
+        //Want to log if the response is null
         if (movieDiscoverResponse == null)
         {
             logger.LogWarning("Deserialization returned null for GetTrendingMoviesAsync. GetTrendingMoviesAsync is {MovieTrendingResponse}.", movieDiscoverResponse);
@@ -67,26 +75,32 @@ public class MovieRepository(IRestClientRepository restClientRepository, ILogger
 
     public async Task<List<MovieVideo>?> GetMovieVideosAsync(int movieId)
     {
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/videos");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        //Making my new request here
+        var request = new RestRequest()
+        {
+            Resource = $"3/movie/{movieId}/videos"
+        };
+        var response = await restClient.GetAsync(request);
         if (response?.Content == null)
         {
             logger.LogError("API response content is null for GetMovieVideosAsync. Response Content: {ResponseContent}", response?.Content);
             return null; // Return an empty list if no videos
         }
 
+        //Converting JSON into C# objects
         var videoResponse = JsonSerializer.Deserialize<MovieVideoResponse>(response.Content, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });
-
+        
+        //Want to log if the response is null
         if (videoResponse?.Results == null)
         {
             logger.LogWarning("Deserialization returned null for GetMovieVideosAsync. GetMovieVideosAsync is {VideoResponse}.", videoResponse);
             return null;
         }
 
+        //returning videoResponse
         return videoResponse.Results;
     }
 }

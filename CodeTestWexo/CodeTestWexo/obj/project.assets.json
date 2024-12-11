@@ -849,24 +849,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chili\\.nuget\\packages\\": {}
+    "C:\\Users\\CLM\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
+      "projectUniqueName": "C:\\Users\\CLM\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
       "projectName": "CodeTestWexo",
-      "projectPath": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
-      "packagesPath": "C:\\Users\\chili\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chili\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\",
+      "projectPath": "C:\\Users\\CLM\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\CodeTestWexo.csproj",
+      "packagesPath": "C:\\Users\\CLM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CLM\\Desktop\\MovieDatabase\\CodeTestWexo\\CodeTestWexo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\chili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\CLM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -923,7 +925,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

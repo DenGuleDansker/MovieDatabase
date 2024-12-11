@@ -5,14 +5,15 @@ using RestSharp;
 
 namespace CodeTestWexo.Repository;
 
-public class SerieRepository(IRestClientRepository restClientRepository, ILogger<SerieRepository> logger) : ISerieRepository
+public class SerieRepository(IRestClient restClient, ILogger<SerieRepository> logger) : ISerieRepository
 {
     public async Task<Serie?> GetSerieDetailsAsync(int serieId)
     {
-        //DI for using the RestClient, less of the same code. 
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/tv/{serieId}");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        var request = new RestRequest()
+        {
+            Resource = $"3/tv/{serieId}"
+        };
+        var response = await restClient.GetAsync(request);
         if (response.Content == null)
         {
             logger.LogError("API response content is null for GetSerieDetailsAsync. Response Content: {ResponseContent}", response.Content);
@@ -38,9 +39,11 @@ public class SerieRepository(IRestClientRepository restClientRepository, ILogger
     public async Task<SerieTrendingResponse?> GetTrendingSeriesAsync()
     {
         //Using the restclient with DI and getting the trending movies by fetching this API 
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/tv/popular");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        var request = new RestRequest()
+        {
+            Resource = $"3/tv/popular"
+        };
+        var response = await restClient.GetAsync(request);
         
         if (response.Content == null)
         {
