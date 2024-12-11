@@ -5,14 +5,19 @@ using RestSharp;
 
 namespace CodeTestWexo.Repository;
 
-public class GenreRepository(IRestClientRepository restClientRepository, ILogger<GenreRepository> logger) : IGenreRepository
+public class GenreRepository(IRestClient restClient, ILogger<GenreRepository> logger) : IGenreRepository
 {
+
+    private int defaultTotalPages = 25;
     
     public async Task<List<Genre>> GetGenresAsync()
     {
-        var client = await restClientRepository.GetClientAsync("https://api.themoviedb.org/3/genre/movie/list");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        //Making my request
+        var request = new RestRequest()
+        {
+            Resource = "3/genre/movie/list"
+        };
+        var response = await restClient.GetAsync(request);
 
         if (response?.Content == null)
         {
@@ -36,13 +41,13 @@ public class GenreRepository(IRestClientRepository restClientRepository, ILogger
 
     public async Task<PaginatedMovies> GetPaginatedMoviesByGenreAsync(int genreId, int page)
     {
-        //Use for pagination later in the frontend
-        var defaultTotalPages = 25;
         
-        //Use for fetching the showcases for GenresHomePage and for pagination for MovieHomePage
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/discover/movie?with_genres={genreId}&page={page}");
-        var request = new RestRequest();
-        var response = await client.GetAsync(request);
+        //Making my request
+        var request = new RestRequest()
+        {
+            Resource = $"3/discover/movie?with_genres={genreId}&page={page}"
+        };
+        var response = await restClient.GetAsync(request);
 
         if (response?.Content == null)
         {

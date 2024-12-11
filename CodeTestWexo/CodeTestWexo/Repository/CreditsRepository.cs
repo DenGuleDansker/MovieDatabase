@@ -5,15 +5,17 @@ using RestSharp;
 
 namespace CodeTestWexo.Repository;
 
-public class CreditsRepository(IRestClientRepository restClientRepository, ILogger<CreditsRepository> logger) : ICreditRepository
+public class CreditsRepository(IRestClient restClient, ILogger<CreditsRepository> logger) : ICreditRepository
 {
     public async Task<List<CastCredits>> GetActorsByMovieIdAsync(int movieId)
     {
-        //Getting the actors related to a specific movieId
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/credits");
-        var request = new RestRequest();
+        //Making my request
+        var request = new RestRequest
+        {
+            Resource = $"3/movie/{movieId}/credits"
+        };
 
-        var response = await client.GetAsync(request);
+        var response = await restClient.GetAsync(request);
         if (response?.Content == null)
         {
             logger.LogError("API response content is null for GetActorsByMovieIdAsync. Response Content: {ResponseContent}", response?.Content);
@@ -37,11 +39,14 @@ public class CreditsRepository(IRestClientRepository restClientRepository, ILogg
     
     public async Task<List<CrewCredits>> GetCrewsByMovieIdAsync(int movieId)
     {
-        //Getting the actors related to a specific movieId
-        var client = await restClientRepository.GetClientAsync($"https://api.themoviedb.org/3/movie/{movieId}/credits");
-        var request = new RestRequest();
 
-        var response = await client.GetAsync(request);
+        //Making my request
+        var request = new RestRequest()
+        {
+            Resource = $"3/movie/{movieId}/credits"
+        };
+
+        var response = await restClient.GetAsync(request);
         if (response?.Content == null)
         {
             logger.LogError("API response content is null for GetCrewsByMovieIdAsync. Response Content: {ResponseContent}", response?.Content);
