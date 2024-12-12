@@ -1,6 +1,8 @@
+using System.Text.Json;
 using Blazored.LocalStorage;
 using CodeTestWexo.Components;
 using CodeTestWexo.Interfaces;
+using CodeTestWexo.Models;
 using CodeTestWexo.Repository;
 using RestSharp;
 
@@ -19,10 +21,11 @@ builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddSingleton<IRestClient>(provider =>
 {
     var configuration = provider.GetRequiredService<IConfiguration>();
-    var options = new RestClientOptions("https://api.themoviedb.org");
+    var options = new RestClientOptions("https://api.themoviedb.org/");
     var client = new RestClient(options);
     client.AddDefaultHeader("Authorization", $"Bearer {configuration["MovieDb:BearerToken"]}");
     client.AddDefaultHeader("accept", "application/json");
+
     return client;
 });
 

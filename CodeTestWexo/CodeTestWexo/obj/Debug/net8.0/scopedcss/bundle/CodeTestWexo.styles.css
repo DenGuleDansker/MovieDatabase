@@ -496,6 +496,7 @@ iframe[b-ppw9tb1rus] {
     padding: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .movie-item:hover[b-q0uvjowmxc] {
@@ -614,6 +615,7 @@ button:hover[b-o2a4kuhhmi] {
     max-width: 200px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .movie-image-container img:hover[b-o2a4kuhhmi] {
@@ -647,6 +649,7 @@ p[b-o2a4kuhhmi] {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 
 .movie-item:hover[b-47wfdtn8vr] {

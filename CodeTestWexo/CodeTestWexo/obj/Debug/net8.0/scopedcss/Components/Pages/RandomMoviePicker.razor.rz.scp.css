@@ -70,6 +70,7 @@ button:hover[b-o2a4kuhhmi] {
     max-width: 200px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .movie-image-container img:hover[b-o2a4kuhhmi] {
