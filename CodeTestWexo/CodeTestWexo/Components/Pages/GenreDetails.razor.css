@@ -21,7 +21,8 @@
 .movie-item img {
     width: 100%;
     height: 250px;
-    object-fit: cover; 
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .movie-item p {

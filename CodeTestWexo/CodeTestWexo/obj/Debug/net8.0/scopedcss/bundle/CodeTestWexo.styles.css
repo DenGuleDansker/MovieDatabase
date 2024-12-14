@@ -237,7 +237,8 @@ body[b-69k8r7afcp] {
 .movie-item img[b-sdl9w3h068] {
     width: 100%;
     height: 250px;
-    object-fit: cover; 
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .movie-item p[b-sdl9w3h068] {
